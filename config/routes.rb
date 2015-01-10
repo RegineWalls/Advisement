@@ -1,10 +1,7 @@
 Advisement::Application.routes.draw do
-  resources :tracks
+  resources :tracks, :electives, :students
 
-  resources :electives
-
-  resources :students
-
+  get 'students/:id_number', to: 'students#show'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
