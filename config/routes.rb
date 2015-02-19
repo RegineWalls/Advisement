@@ -1,7 +1,4 @@
-Advisement::Application.routes.draw do
-  resources :tracks, :electives, :students
-
-  get 'students/:id_number', to: 'students#show'
+Rails.application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -42,7 +39,7 @@ Advisement::Application.routes.draw do
   #       get 'recent', on: :collection
   #     end
   #   end
-  
+
   # Example resource route with concerns:
   #   concern :toggleable do
   #     post 'toggle'
