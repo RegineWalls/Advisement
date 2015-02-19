@@ -1,0 +1,14 @@
+.row1 {
+  height: 30px;
+  color: white;
+  background-color: #36ADAE;
+}
+.row2 {
+  height: 140px;
+  color: white;
+  background-color: #2B2F30;
+}
+.button {
+  width: 120px;
+  color: black;
+}
