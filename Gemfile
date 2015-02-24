@@ -4,12 +4,9 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.0'
 
 # Use sqlite3 as the database for Active Record
-<<<<<<< HEAD
-#gem 'sqlite3'
-gem 'mysql2'
-=======
+gem 'sqlite3'
+#gem 'mysql2'
 
->>>>>>> parent of 6ee6648... 	modified:   Gemfile
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
