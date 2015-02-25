@@ -4,8 +4,8 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.0'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
-#gem 'mysql2'
+#gem 'sqlite3'
+gem 'mysql'
 
 # gem 'mysql2', '~> 0.3.18'
 # Use SCSS for stylesheets
@@ -47,3 +47,5 @@ end
 # gem 'debugger', group: [:development, :test]
 
 gem 'twitter-bootstrap-rails'
+
+gem 'yaml_db'
