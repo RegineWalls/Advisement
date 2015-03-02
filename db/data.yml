@@ -1,0 +1,81 @@
+
+---
+electives:
+  columns:
+  - id
+  - created_at
+  - updated_at
+  - name
+  - units
+  - description
+  - semester
+  - slots
+  records: 
+  - - 1
+    - '2015-02-24 13:51:34.637654'
+    - '2015-02-24 13:51:34.637654'
+    - 
+    - 
+    - 
+    - 
+    - 
+  - - 2
+    - '2015-02-24 13:53:29.888964'
+    - '2015-02-24 13:53:29.888964'
+    - 
+    - 
+    - 
+    - 
+    - 
+
+---
+tracks:
+  columns:
+  - id
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - '2015-02-24 13:51:04.767515'
+    - '2015-02-24 13:51:04.767515'
+  - - 2
+    - '2015-02-24 13:51:11.900380'
+    - '2015-02-24 13:51:11.900380'
+
+---
+students:
+  columns:
+  - id
+  - created_at
+  - updated_at
+  - id_number
+  - name
+  - year_level
+  - course
+  - track
+  - specialization
+  - email_address
+  - contact_number
+  records: 
+  - - 1
+    - '2015-02-24 13:51:20.760115'
+    - '2015-02-24 13:51:20.760115'
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+  - - 2
+    - '2015-02-24 14:49:04.913495'
+    - '2015-02-24 14:49:04.913495'
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 

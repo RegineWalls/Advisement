@@ -11,7 +11,37 @@
     </div>
   <% end %>
 
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  
+    Elective Code:
+    <%= f.text_field :code %>
+    <br>
+    Elective Name:
+    <%= f.text_field :name %>
+    <br>
+    Prerequisites:
+    <%= f.text_field :prerequisites %>
+    <br>
+    Units:
+    <%= f.number_field :units %>
+    <br>
+    Elective Description:
+    <%= f.text_area :description, size: "60x10" %>
+    <br>
+    Track:
+    <%= check_box_tag(:bi) %>
+    <%= label_tag(:bi, "BI") %>
+    <%= check_box_tag(:es) %>
+    <%= label_tag(:es, "ES") %>
+    <%= check_box_tag(:im) %>
+    <%= label_tag(:im, "IM") %>
+    <%= check_box_tag(:mgt) %>
+    <%= label_tag(:mgt, "MGT") %>
+    <br>
+    Slots Available:
+    <%= f.number_field :slots %>
+    <br>
+    Semester:
+
+  <input type="submit" value="Save Goal"/>
+  
 <% end %>

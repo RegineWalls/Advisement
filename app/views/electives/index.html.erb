@@ -1,25 +1,54 @@
-<h1>Listing electives</h1>
+<div class="col-md-2">
+  <div class="row" style="height: 40px">
+    <a class="btn btn-default" href="electives/new" role="button" style='width: 150px;'>ADD ELECTIVE</a>
+  </div>
+  <div class="row" style="height: 40px">
+    <a class="btn btn-default" href="electives/edit" role="button" style='width: 150px;'>EDIT ELECTIVE</a>
+  </div>
+  <div class="row" style="height: 40px">
+    <a class="btn btn-default" href="electives/destroy" role="button" style='width: 150px;'>DELETE ELECTIVE</a>
+  </div>
+  <div class="row" style="height: 40px">
+    <a class="btn btn-default" href="electives/show" role="button" style='width: 150px;'>VIEW ELECTIVE</a>
+  </div>
+  <div class="row" style="height: 40px">
+    <a class="btn btn-default" href="electives/select" role="button" style='width: 150px;'>SELECT ELECTIVE</a>
+  </div>
+  <div class="row">
+    <div class="form-group" style='width: 120px'>
+      <label for="type"></label>
+      <select name="kind">
+        <option value="bi">BI Electives</option>
+        <option value="es">ES Electives</option>
+        <option value="im">IM Electives</option>
+        <option value="free">Free Electives</option>
+      </select>
+    </div>
+  </div>
+</div>
+<div class="col-md-10" style="">
+  <div class="row" style="height: 30px; background-color: #36ADAE; text-align: center;"><!-- fix border and text alignment -->
+    Elective List
+  </div>
+  <div class="row">
+    <table class="table">
+      <thead>
+        <tr>
+          <th style="width: 175px; text-align: center;">Code</th>
+          <th style="text-align: center;">Name</th>
+          <th style="align: right; width: 125px; text-align: center;">Track</th>
+        </tr>
+      </thead>
 
-<table>
-  <thead>
-    <tr>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @electives.each do |elective| %>
-      <tr>
-        <td><%= link_to 'Show', elective %></td>
-        <td><%= link_to 'Edit', edit_elective_path(elective) %></td>
-        <td><%= link_to 'Destroy', elective, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Elective', new_elective_path %>
+      <tbody>
+        <% @electives.each do |elective| %>
+        <tr>
+          <td><%= link_to 'Show', elective %></td>
+          <td><%= link_to 'Edit', edit_elective_path(elective) %></td>
+          <td><%= link_to 'Destroy', elective, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

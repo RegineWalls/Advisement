@@ -16,7 +16,6 @@ ActiveRecord::Schema.define(version: 20150110024533) do
   create_table "electives", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "code"
     t.string   "name"
     t.integer  "units"
     t.string   "description"
