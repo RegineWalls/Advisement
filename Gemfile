@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+# Joey working on the Model Logic
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 
