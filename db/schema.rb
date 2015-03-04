@@ -11,7 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150304140712) do
+ActiveRecord::Schema.define(version: 20150304145218) do
+
+  create_table "credits", force: true do |t|
+    t.integer  "completed"
+    t.integer  "total"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "student_id"
+    t.integer  "track_id"
+  end
+
+  add_index "credits", ["student_id"], name: "index_credits_on_student_id", using: :btree
+  add_index "credits", ["track_id"], name: "index_credits_on_track_id", using: :btree
 
   create_table "electives", force: true do |t|
     t.datetime "created_at"
