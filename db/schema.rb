@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150304133052) do
+ActiveRecord::Schema.define(version: 20150304140712) do
 
   create_table "electives", force: true do |t|
     t.datetime "created_at"
@@ -50,5 +50,16 @@ ActiveRecord::Schema.define(version: 20150304133052) do
   end
 
   add_index "tracks", ["track_code"], name: "index_tracks_on_track_code", using: :btree
+
+  create_table "transcripts", force: true do |t|
+    t.boolean  "status"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "student_id"
+    t.integer  "elective_id"
+  end
+
+  add_index "transcripts", ["elective_id"], name: "index_transcripts_on_elective_id", using: :btree
+  add_index "transcripts", ["student_id"], name: "index_transcripts_on_student_id", using: :btree
 
 end
