@@ -1,0 +1,16 @@
+Thu, 05 Mar 2015 17:12:08 +0800
+README.rdoc	Sat, 10 Jan 2015 09:44:13 +0800
+app/controllers/application_controller.rb	Sat, 10 Jan 2015 09:44:13 +0800
+app/controllers/electives_controller.rb	Thu, 05 Mar 2015 16:52:48 +0800
+app/controllers/pages_controller.rb	Thu, 05 Mar 2015 16:52:48 +0800
+app/controllers/students_controller.rb	Sat, 10 Jan 2015 09:44:13 +0800
+app/controllers/tracks_controller.rb	Sat, 10 Jan 2015 09:44:13 +0800
+app/helpers/application_helper.rb	Sat, 10 Jan 2015 09:44:13 +0800
+app/helpers/electives_helper.rb	Sat, 10 Jan 2015 09:44:13 +0800
+app/helpers/students_helper.rb	Sat, 10 Jan 2015 09:44:13 +0800
+app/helpers/tracks_helper.rb	Sat, 10 Jan 2015 09:44:13 +0800
+app/models/credit.rb	Wed, 04 Mar 2015 23:19:47 +0800
+app/models/elective.rb	Wed, 04 Mar 2015 23:19:47 +0800
+app/models/student.rb	Wed, 04 Mar 2015 23:19:47 +0800
+app/models/track.rb	Wed, 04 Mar 2015 23:19:47 +0800
+app/models/transcript.rb	Wed, 04 Mar 2015 23:19:47 +0800

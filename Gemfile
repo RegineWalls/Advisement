@@ -1,7 +1,5 @@
 source 'https://rubygems.org'
 
-# Joey working on the Model Logic
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 
@@ -9,7 +7,6 @@ gem 'rails', '4.0.0'
 gem 'sqlite3'
 gem 'mysql'
 
-# gem 'mysql2', '~> 0.3.18'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
@@ -49,5 +46,5 @@ end
 # gem 'debugger', group: [:development, :test]
 
 gem 'twitter-bootstrap-rails'
-
+gem 'rdoc'
 gem 'yaml_db'

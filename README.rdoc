@@ -1,19 +1,18 @@
-== README
+Advisement System README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Version Basics:
 
-Things you may want to cover:
+* Ruby version: 
+  ruby 2.0.0p481
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
+* System dependencies:
+  Ruby on Rails 4.2.0
+  Gemset version 2.4.5
+  Bootstrap v3.1.1
+  MySQL Ver 14.14 Distrib 5.6.23
 
 * Database initialization
+  Set Database user to 'root' and no password.
 
 * How to run the test suite
 
@@ -21,8 +20,3 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
