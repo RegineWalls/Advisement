@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 20150305131011) do
     t.integer  "semester"
     t.integer  "slots"
     t.string   "elective_code"
-    t.string   "prequisites"
+    t.string   "prerequisites"
   end
 
   add_index "electives", ["elective_code"], name: "index_electives_on_elective_code", using: :btree
