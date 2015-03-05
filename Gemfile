@@ -48,3 +48,4 @@ end
 gem 'twitter-bootstrap-rails'
 gem 'rdoc'
 gem 'yaml_db'
+gem 'backup'
