@@ -5,16 +5,20 @@ class ElectivesController < ApplicationController
   # GET /electives.json
   def index
     @electives = Elective.all
+    render :template => "electives/index"
   end
 
   # GET /electives/1
   # GET /electives/1.json
   def show
+    @electives = Elective.find(params[:id])
+    render :template => "electives/show"
   end
 
   # GET /electives/new
   def new
     @elective = Elective.new
+    render :template => "electives/new"
   end
 
   # GET /electives/1/edit
