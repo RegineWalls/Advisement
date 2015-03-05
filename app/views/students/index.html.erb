@@ -3,22 +3,21 @@
 <%= link_to "New Student", new_student_path %>
 <p>
 
-<table>
-  <thead>
+<table width = "100%">
+  <!-- <thead> -->
     <tr>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+      <th>Student Name</th>
+     </tr>
+  <!-- </thead> -->
 
-  <tbody>
+  <!-- <tbody> -->
     <% @students.each do |student| %>
       <tr>
-        <td><%= link_to "Show", student %></td>
+        <td><%= student.name %></td>
+        <td><%= link_to "Show", student_path(student.id) %></td>
         <td><%= link_to "Edit", edit_student_path(student) %></td>
-        
+        <td><%= link_to "Destroy", student_path(student.id), :method => :delete, :data => { :confirm => "Are you sure?" } %> 
       </tr>
     <% end %>
-  </tbody>
+<!--   </tbody> -->
 </table>
