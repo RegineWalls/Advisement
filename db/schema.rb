@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150305124612) do
+ActiveRecord::Schema.define(version: 20150305131011) do
 
   create_table "credits", force: true do |t|
     t.integer  "completed"
@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 20150305124612) do
     t.integer  "semester"
     t.integer  "slots"
     t.string   "elective_code"
+    t.string   "prequisites"
   end
 
   add_index "electives", ["elective_code"], name: "index_electives_on_elective_code", using: :btree
