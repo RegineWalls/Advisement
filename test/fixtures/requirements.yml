@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  semester: 
+  is_required: false
+
+two:
+  semester: 
+  is_required: false
