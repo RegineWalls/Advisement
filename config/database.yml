@@ -20,6 +20,12 @@ test:
   username: root
   password:
 
+workaround:
+  adapter: sqlite3
+  pool: 5
+  timeout: 5000
+  database: db/development.sqlite3
+
 production:
   adapter: mysql
   database: Advisement_production
