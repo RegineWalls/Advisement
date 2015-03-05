@@ -5,20 +5,26 @@ class StudentsController < ApplicationController
   # GET /students.json
   def index
     @students = Student.all
+    render :template => "students/index"
   end
 
   # GET /students/1
   # GET /students/1.json
   def show
+    @student = Student.find(params[:id])
+    render :template => "students/show"
   end
 
   # GET /students/new
   def new
     @student = Student.new
+    render :template => "students/new"
   end
 
   # GET /students/1/edit
   def edit
+    @student = Student.find(params[:id])
+    render :template => "students/edit"
   end
 
   # POST /students
