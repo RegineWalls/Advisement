@@ -1,4 +1,12 @@
-<p id="notice"><%= notice %></p>
+<h1><%= @student.name %></h1>
 
-<%= link_to 'Edit', edit_student_path(@student) %> |
-<%= link_to 'Back', students_path %>
+<strong>ID Number</strong>: <%= @student.id_number %> <br>
+<strong>Year Level</strong>: <%= @student.year_level %> <br>
+<strong>Course</strong>: <%= @student.course %> <br>
+<strong>Track</strong>: <%= @student.track %> <br>
+<strong>Specialization</strong>: <%= @student.specialization %> <br>
+<strong>E-mail Address</strong>: <%= @student.email_address %> <br>
+<strong>Contact Number</strong>: <%= @student.contact_number %> <br>
+<br>
+<%= link_to "Edit", edit_student_path(@student) %> |
+<%= link_to "Back", students_path %>

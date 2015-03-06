@@ -14,9 +14,12 @@
     <!-- Course -->
     <%= f.input :course, :input_html => {:maxlength => 55, :size => 35} %>
     <!-- Track -->
-    <%= f.input :track, :input_html => {:maxlength => 35, :size => 30} %>
+    <%= f.label :track %>
+    <%= f.select :track, :collection => ['Enterprise Systems', 'Business Intelligence', 'Interactive Multimedia', 'N/A'] %>
     <!-- Spec -->
-    <%= f.input :specialization, :input_html => {:maxlength => 35, :size => 30} %>
+    <br>
+    <%= f.label :specialization %>
+    <%= f.select :specialization, :collection => ['Enterprise Systems', 'Business Intelligence', 'Interactive Multimedia', 'N/A'] %>
     <!-- Email -->
     <%= f.input :email_address, :input_html => {:maxlength => 50, :size => 30} %>
     <!-- Contact -->
