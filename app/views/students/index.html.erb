@@ -3,14 +3,14 @@
 <%= link_to "New Student", new_student_path %>
 <p>
 
-<table width = "100%">
-  <!-- <thead> -->
+<table class = "table table-striped">
+  <thead>
     <tr>
       <th>Student Name</th>
      </tr>
-  <!-- </thead> -->
+  </thead>
 
-  <!-- <tbody> -->
+  <tbody>
     <% @students.each do |student| %>
       <tr>
         <td><%= student.name %></td>
@@ -19,5 +19,5 @@
         <td><%= link_to "Destroy", student_path(student.id), :method => :delete, :data => { :confirm => "Are you sure?" } %> 
       </tr>
     <% end %>
-<!--   </tbody> -->
+  </tbody>
 </table>

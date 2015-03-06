@@ -1,19 +1,36 @@
-<%= form_for(@student) do |f| %>
-  <% if @student.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@student.errors.count, "error") %> prohibited this student from being saved:</h2>
+<%= simple_nested_form_for(@student) do |f| %>
+  
+  <div class="form-inputs">
+    <!-- Id number -->
+    <%= f.input :id_number, :input_html => {:maxlength => 6, :size => 6} %>
+    <!-- Name -->
+    <%= f.input :name, :input_html => {:maxlength => 80, :size => 40} %>
+    <!-- Year level -->
+    <%= f.label :year_level %>
+    <%= f.radio_button :year_level, :checked => true %>
+    <%= f.label :year_level_3rd, '3rd' %>
+    <%= f.radio_button :year_level, :checked => true %>
+    <%= f.label :year_level_4th, '4th' %>
+    <!-- Course -->
+    <%= f.input :course, :input_html => {:maxlength => 55, :size => 35} %>
+    <!-- Track -->
+    <%= f.input :track, :input_html => {:maxlength => 35, :size => 30} %>
+    <!-- Spec -->
+    <%= f.input :specialization, :input_html => {:maxlength => 35, :size => 30} %>
+    <!-- Email -->
+    <%= f.input :email_address, :input_html => {:maxlength => 50, :size => 30} %>
+    <!-- Contact -->
+    <%= f.input :contact_number, :input_html => {:maxlength => 11, :size => 25} %>
+    <!-- Accomplished? -->
+    <%= f.input :advisement_accomplished %>
+    <br>
+  </div>
 
-      <ul>
-      <% @student.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+
   <% end %>
 
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
-
+<br><br>
 <%= link_to "Back to Home", root_path %>
