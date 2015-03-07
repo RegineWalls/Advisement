@@ -44,9 +44,6 @@
       <tr>
         <td style="text-align: center;"><%= elective.elective_code %></td>
         <td style="text-align: center;"><%= elective.name %></td>
-        <td style="text-align: center;"><%= link_to "Show", elective_path(elective.id) %></td>
-        <td style="text-align: center;"><%= link_to "Edit", edit_elective_path(elective.id) %></td>
-        <td style="text-align: center;"><%= link_to "Destroy", elective_path(elective.id), :method => :delete, :data => { :confirm => "Are you sure?" } %>
       </tr>
     <% end %>
   </tbody>
