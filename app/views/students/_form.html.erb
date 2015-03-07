@@ -2,30 +2,28 @@
   
   <div class="form-inputs">
     <!-- Id number -->
-    <%= f.input :id_number, :input_html => {:maxlength => 6, :size => 6} %>
+    <%= f.input :id_number, :input_html => {:size => 6} %>
     <!-- Name -->
-    <%= f.input :name, :input_html => {:maxlength => 80, :size => 40} %>
-    <!-- Year level -->
-    <%= f.label :year_level %>
-    <%= f.radio_button :year_level, :checked => true %>
-    <%= f.label :year_level_3rd, '3rd' %>
-    <%= f.radio_button :year_level, :checked => true %>
-    <%= f.label :year_level_4th, '4th' %>
+    <%= f.input :name, :input_html => {:size => 40} %>
+    <!-- Year Level -->
+    <%= f.input :year_level, as: :radio_buttons, :collection => ['2nd', '3rd', '4th'] %>
     <!-- Course -->
-    <%= f.input :course, :input_html => {:maxlength => 55, :size => 35} %>
+    <%= f.input :course, :input_html => {:size => 35} %>
+
+    <!-- REMEMBER TO CHANGE DROPDOWN TO CHECKBOXES TO ACCEPT MULTIPLE TRACKS AND SPECS.
+    Current database has no capacity to accept that for now. -->
+    
     <!-- Track -->
     <%= f.label :track %>
-    <%= f.select :track, :collection => ['Enterprise Systems', 'Business Intelligence', 'Interactive Multimedia', 'N/A'] %>
+    <%= f.select :track, :collection => ['Enterprise Systems', 'Business Intelligence', 'Interactive Multimedia', 'N/A'] %><br>
     <!-- Spec -->
-    <br>
     <%= f.label :specialization %>
     <%= f.select :specialization, :collection => ['Enterprise Systems', 'Business Intelligence', 'Interactive Multimedia', 'N/A'] %>
     <!-- Email -->
-    <%= f.input :email_address, :input_html => {:maxlength => 50, :size => 30} %>
+    <%= f.input :email_address, :input_html => {:size => 30} %>
     <!-- Contact -->
     <%= f.input :contact_number, :input_html => {:maxlength => 11, :size => 25} %>
-    <!-- Accomplished? -->
-    <%= f.input :advisement_accomplished %>
+    
     <br>
   </div>
 

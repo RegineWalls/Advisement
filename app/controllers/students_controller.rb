@@ -29,7 +29,7 @@ class StudentsController < ApplicationController
     if @student.save
       redirect_to student_path(@student.id)
     else
-      render :template => "student/new"
+      render :template => "students/new"
     end
 
   end
@@ -45,7 +45,7 @@ class StudentsController < ApplicationController
   end
 
   def destroy
-    Student.find(params[:id]).destoy!
+    Student.find(params[:id]).destroy!
     redirect_to students_path
   end
 
