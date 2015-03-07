@@ -139,6 +139,7 @@ DEPENDENCIES
   mysql
   nested_form
   rails (= 4.0.0)
+  rake
   rdoc
   sass-rails (~> 4.0.0)
   sdoc

@@ -31,6 +31,16 @@ class StudentsController < ApplicationController
     end
   end
 
+# CSV Import Function
+  def import
+    begin
+      Student.import(params[:file])
+      redirect_to root_url, notice: "Students imported."
+    rescue
+      redirect_to root_url, notice: "Invalid CSV file format."
+    end
+  end
+
   def update
     @student = Student.find(params[:id])
 
