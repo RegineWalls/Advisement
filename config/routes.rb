@@ -3,6 +3,11 @@ Rails.application.routes.draw do
   resources :tracks
   resources :electives
   resources :students
+  resources :students do  
+    collection { post :import }  
+  end  
+
+  
 
   ###get 'students/:id_number', to: => "students#show"
 

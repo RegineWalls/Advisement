@@ -35,9 +35,9 @@ class StudentsController < ApplicationController
   def import
     begin
       Student.import(params[:file])
-      redirect_to root_url, notice: "Students imported."
+      redirect_to students_path, notice: "Students imported."
     rescue
-      redirect_to root_url, notice: "Invalid CSV file format."
+      redirect_to students_path, notice: "Invalid CSV file format."
     end
   end
 
