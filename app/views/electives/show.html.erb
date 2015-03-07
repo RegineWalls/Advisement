@@ -1,4 +1,11 @@
-<p id="notice"><%= notice %></p>
+<h1><%= @elective.name %></h1>
 
-<%= link_to 'Edit', edit_elective_path(@elective) %> |
-<%= link_to 'Back', electives_path %>
+<strong>Elective Code</strong>: <%= @elective.elective_code %> <br>
+<strong>Prerequisites</strong>: <%= @elective.prerequisites %> <br>
+<strong>Units</strong>: <%= @elective.units %> <br>
+<strong>Slots</strong>: <%= @elective.slots %> <br>
+<strong>Semester</strong>: <%= @elective.semester %> <br>
+<strong>Description</strong>: <%= @elective.description %> <br>
+<br>
+<%= link_to "Edit", edit_elective_path(@elective) %> |
+<%= link_to "Back", electives_path %>

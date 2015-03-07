@@ -1,8 +1,6 @@
 class StudentsController < ApplicationController
   # before_action :set_student, only: [:show, :edit, :update, :destroy]
 
-  # GET /students
-  # GET /students.json
   def index
     @students = Student.all
     render :template => "students/index"
@@ -31,7 +29,6 @@ class StudentsController < ApplicationController
     else
       render :template => "students/new"
     end
-
   end
 
   def update

@@ -1,47 +1,30 @@
-<%= form_for(@elective) do |f| %>
-  <% if @elective.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@elective.errors.count, "error") %> prohibited this elective from being saved:</h2>
+<%= simple_nested_form_for(@elective) do |f| %>
 
-      <ul>
-      <% @elective.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
+<div class="form-inputs">
+    <!-- Code -->
+    <%= f.input :elective_code, :input_html => {:size => 40} %>
+    <!-- Name -->
+    <%= f.input :name, :input_html => {:size => 40} %>
+    <!-- Prerequisistes -->
+    <%= f.input :prerequisites, :input_html => {:size => 40} %>
+    <!-- Units -->
+    <%= f.input :units, :input_html => {:size => 35} %><p>
+    <!-- Description -->
+    <%= f.label :description %><br>
+    <%= f.text_area :description, size: "60x5" %>
+    <!-- Slots -->
+    <%= f.input :slots, :input_html => {:size => 35} %>
+    <!-- Semester -->
+    <%= f.input :semester, :input_html => {:size => 35} %>
+   <br>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+
   <% end %>
 
-  
-    Elective Code:
-    <%= f.input :code %>
-    <br>
-    Elective Name:
-    <%= f.input :name %>
-    <br>
-    Prerequisites:
-    <%= f.input :prerequisites %>
-    <br>
-    Units:
-    <%= f.number_field :units %>
-    <br>
-    Elective Description:
-    <%= f.text_area :description, size: "60x10" %>
-    <br>
-    Track:
-    <%= check_box_tag(:bi) %>
-    <%= label_tag(:bi, "BI") %>
-    <%= check_box_tag(:es) %>
-    <%= label_tag(:es, "ES") %>
-    <%= check_box_tag(:im) %>
-    <%= label_tag(:im, "IM") %>
-    <%= check_box_tag(:mgt) %>
-    <%= label_tag(:mgt, "MGT") %>
-    <br>
-    Slots Available:
-    <%= f.number_field :slots %>
-    <br>
-    Semester:
-
-  <input type="submit" value="Save Goal"/>
-  
-<% end %>
+<br>
+<br>
+<%= link_to "Back to Home", root_path %>

@@ -6,27 +6,27 @@
 <table class = "table table-striped">
   <thead>
     <tr>
-      <th>Student Name</th>
-      <th>ID Number</th>
-      <th>Year Level</th>
-      <th>Course</th>
-      <th>Track</th>
-      <th>Specialization</th>
+      <th style="text-align: center;">Student Name</th>
+      <th style="text-align: center;">ID Number</th>
+      <th style="text-align: center;">Year Level</th>
+      <th style="text-align: center;">Course</th>
+      <th style="text-align: center;">Track</th>
+      <th style="text-align: center;">Specialization</th>
      </tr>
   </thead>
 
   <tbody>
     <% @students.each do |student| %>
       <tr>
-        <td><%= student.name %></td>
-        <td><%= student.id_number %></td>
-        <td><%= student.year_level %></td>
-        <td><%= student.course %></td>
-        <td><%= student.track %></td>
-        <td><%= student.specialization %></td>
-        <td><%= link_to "Show", student_path(student.id) %></td>
-        <td><%= link_to "Edit", edit_student_path(student) %></td>
-        <td><%= link_to "Destroy", student_path(student.id), :method => :delete, :data => { :confirm => "Are you sure?" } %> 
+        <td style="text-align: center;"><%= student.name %></td>
+        <td style="text-align: center;"><%= student.id_number %></td>
+        <td style="text-align: center;"><%= student.year_level %></td>
+        <td style="text-align: center;"><%= student.course %></td>
+        <td style="text-align: center;"><%= student.track %></td>
+        <td style="text-align: center;"><%= student.specialization %></td>
+        <td style="text-align: center;"><%= link_to "Show", student_path(student.id) %></td>
+        <td style="text-align: center;"><%= link_to "Edit", edit_student_path(student) %></td>
+        <td style="text-align: center;"><%= link_to "Destroy", student_path(student.id), :method => :delete, :data => { :confirm => "Are you sure?" } %> 
       </tr>
     <% end %>
   </tbody>
