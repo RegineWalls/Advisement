@@ -51,10 +51,9 @@ ActiveRecord::Schema.define(version: 20150305131011) do
   add_index "requirements", ["elective_id"], name: "index_requirements_on_elective_id", using: :btree
   add_index "requirements", ["track_id"], name: "index_requirements_on_track_id", using: :btree
 
-  create_table "students", force: true do |t|
+  create_table "students", primary_key: "id_number", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "id_number"
     t.string   "name"
     t.integer  "year_level"
     t.string   "course"
@@ -64,8 +63,6 @@ ActiveRecord::Schema.define(version: 20150305131011) do
     t.string   "contact_number"
     t.boolean  "advisement_accomplished"
   end
-
-  add_index "students", ["id_number"], name: "index_students_on_id_number", using: :btree
 
   create_table "tracks", force: true do |t|
     t.datetime "created_at"

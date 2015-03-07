@@ -1,5 +1,6 @@
 class Student < ActiveRecord::Base
   require 'csv'
+  self.primary_key = 'id_number'
 
   has_many :transcripts
   has_many :electives, :through => :transcripts
