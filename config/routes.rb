@@ -2,6 +2,9 @@ Rails.application.routes.draw do
   root :to => "pages#index"
   resources :tracks
   resources :electives
+  resources :electives do
+    collection {post :import }
+  end
   resources :students
   resources :students do  
     collection { post :import }  

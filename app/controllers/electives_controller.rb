@@ -31,6 +31,16 @@ class ElectivesController < ApplicationController
     end
   end
 
+  # CSV Import Function
+  def import
+    begin
+      Elective.import(params[:file])
+      redirect_to electives_path, notice: "Electives imported."
+    rescue
+      redirect_to electives_path, notice: "Invalid CSV file format."
+    end
+  end
+
   def update
     @elective = Elective.find(params[:id])
 

@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 20150305131011) do
   add_index "credits", ["track_id"], name: "index_credits_on_track_id", using: :btree
 
   create_table "electives", force: true do |t|
+    t.string   "elective_code", null: false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "name"
@@ -33,11 +34,8 @@ ActiveRecord::Schema.define(version: 20150305131011) do
     t.string   "description"
     t.integer  "semester"
     t.integer  "slots"
-    t.string   "elective_code"
     t.string   "prerequisites"
   end
-
-  add_index "electives", ["elective_code"], name: "index_electives_on_elective_code", using: :btree
 
   create_table "requirements", force: true do |t|
     t.integer  "semester"

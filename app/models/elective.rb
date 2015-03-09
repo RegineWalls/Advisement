@@ -1,4 +1,7 @@
 class Elective < ActiveRecord::Base
+  require 'csv'
+  #self.primary_key = 'elective_code'
+  
   has_many :transcripts
   has_many :students, :through => :transcripts
 
@@ -11,4 +14,11 @@ class Elective < ActiveRecord::Base
   validates :units, presence: true
   validates :slots, presence: true
   validates :semester, presence: true
+
+  # External CSV File Import funtion
+  def self.import(file)  
+    CSV.foreach(file.path, headers: true) do |row|
+      Elective.create! row.to_hash
+    end
+  end
 end
