@@ -14,7 +14,13 @@ class Student < ActiveRecord::Base
   validates :email_address, presence: true
   validates :contact_number, presence: true
   
- 
+ def self.search(search)
+  if search
+    find(:all, :conditions => ['id_number LIKE ?', "%#{search}%"])
+  else
+    find(:all)
+  end
+end
 
 # External CSV File Import funtion
 #    attr_accessible :name, :course, :email_address, :contact_number

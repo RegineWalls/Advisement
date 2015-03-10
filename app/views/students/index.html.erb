@@ -1,5 +1,12 @@
 <h1>Listing Students</h1>
 
+<%= form_tag students_path, :method => 'get' do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => nil %>
+  </p>
+<% end %>
+
 <div class="col-md-2">
   <div class="row" style="height: 40px">
     <a class="btn btn-default" href="students/new" role="button" style='width: 150px;'>ADD STUDENT</a>
@@ -31,7 +38,7 @@
         <td style="text-align: center;"><%= student.specialization %></td>
         <td style="text-align: center;"><%= link_to "Show", student_path(student.id) %></td>
         <td style="text-align: center;"><%= link_to "Edit", edit_student_path(student) %></td>
-        <td style="text-align: center;"><%= link_to "Destroy", student_path(student.id), :method => :delete, :data => { :confirm => "Are you sure?" } %> 
+        <td style="text-align: center;"><%= link_to "Destroy", student_path(student.id), method: :delete, data: { confirm: "Are you sure?" } %></td>
       </tr>
     <% end %>
   </tbody>

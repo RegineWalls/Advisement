@@ -2,8 +2,9 @@ class StudentsController < ApplicationController
   # before_action :set_student, only: [:show, :edit, :update, :destroy]
 
   def index
-    @students = Student.all
-    render :template => "students/index"
+    @students = Student.search(params[:search])
+    # @students = Student.all
+    # render :template => "students/index"
   end
 
   def show
