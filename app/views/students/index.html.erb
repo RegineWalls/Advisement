@@ -11,6 +11,12 @@
   <div class="row" style="height: 40px">
     <a class="btn btn-default" href="students/new" role="button" style='width: 150px;'>ADD STUDENT</a>
   </div>
+  <div class="row" style="height: 40px">
+    <a class="btn btn-default" href="students/destroy" role="button" style='width: 150px;'>DELETE STUDENTS</a>
+  </div>
+  <div class="row" style="height: 40px">
+    <a class="btn btn-default" href="students/select" role="button" style='width: 150px;'>SELECT STUDENTS</a>
+  </div>
 </div>
 
 <p>
@@ -43,12 +49,5 @@
     <% end %>
   </tbody>
 </table>
-
-<h2>Import Students</h2>  
-<%= form_tag import_students_path, multipart: true do %>  
-  <%= file_field_tag :file %>
-  <br> 
-  <%= submit_tag "Import" %>  
-<% end %>  
 
 

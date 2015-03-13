@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   root :to => "pages#index"
   resources :tracks
+  resources :users
   resources :electives
   resources :electives do
     collection {post :import }
