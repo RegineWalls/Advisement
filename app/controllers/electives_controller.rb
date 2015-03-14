@@ -7,7 +7,7 @@ class ElectivesController < ApplicationController
   end
 
   def show
-    @electives = Elective.find(params[:id])
+    @elective = Elective.find(params[:id])
     render :template => "electives/show"
   end
 
