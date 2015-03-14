@@ -3,8 +3,6 @@ class StudentsController < ApplicationController
 
   def index
     @students = Student.search(params[:search])
-    # @students = Student.all
-    # render :template => "students/index"
   end
 
   def show

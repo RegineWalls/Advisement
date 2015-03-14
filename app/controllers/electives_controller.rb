@@ -56,14 +56,17 @@ class ElectivesController < ApplicationController
     redirect_to electives_path
   end
 
-  # private
-  #   # Use callbacks to share common setup or constraints between actions.
-  #   def set_elective
-  #     @elective = Elective.find(params[:id])
-  #   end
-
-    # Never trust parameters from the scary internet, only allow the white list through.
   def elective_params
     params.require(:elective).permit!
+  end
+
+  def delete
+    @electives = Elective.all
+    render :template => "electives/delete"
+  end
+
+  def select
+    @electives = Elective.all
+    render :template => "electives/select"
   end
 end

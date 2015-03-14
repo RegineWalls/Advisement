@@ -26,6 +26,16 @@ Rails.application.routes.draw do
       get 'select'
     end
   end
+  resources :electives do
+    member do 
+      get 'delete'
+    end
+  end
+  resources :electives do
+    member do 
+      get 'select'
+    end
+  end
 
   # get "/students", :to => "students#index", as: :students
   # get "/student/:id", :to => "students#show", as: :student
