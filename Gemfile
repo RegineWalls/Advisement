@@ -5,7 +5,7 @@ gem 'rails', '4.0.0'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
-#gem 'mysql'
+gem 'mysql'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -50,6 +50,6 @@ end
 gem 'twitter-bootstrap-rails'
 gem 'rdoc'
 gem 'yaml_db'
-#gem 'backup'
+gem 'backup'
 gem 'rake'
 gem 'devise'
