@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :users
   resources :students
   resources :electives
+  resources :delete
   resources :electives do
     collection {post :import }
   end
