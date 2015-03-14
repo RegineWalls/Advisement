@@ -10,10 +10,20 @@ Rails.application.routes.draw do
   end
   resources :students do  
     collection { post :import }  
-  end  
+  end
   resources :students do
     member do 
       get 'advise'
+    end
+  end
+  resources :students do
+    member do 
+      get 'delete'
+    end
+  end
+  resources :students do
+    member do 
+      get 'select'
     end
   end
 

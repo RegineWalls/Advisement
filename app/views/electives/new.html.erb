@@ -1,10 +1,9 @@
-<h1>New Elective</h1>
+<div class="col-md-2">
+<div class="row" style="height: 40px">
+<h2>New Elective</h2>
 
 <%= render 'form' %>
 
-<h2>Import Electives</h2>  
-<%= form_tag import_electives_path, multipart: true do %>  
-  <%= file_field_tag :file %>  
-  <br><%= submit_tag "Import" %>  
-<% end %> 
-<%= link_to "Back", electives_path %>
+| <%= link_to "Back", electives_path %>
+</div>
+</div>

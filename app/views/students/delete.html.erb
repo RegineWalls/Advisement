@@ -1,25 +1,3 @@
-<div class="col-md-2">
-  <div class="row" style="height: 40px">
-    <a class="btn btn-default" href="students/new" role="button" style='width: 150px;'>ADD STUDENT</a>
-  </div>
-  <div class="row" style="height: 40px">
-    <a class="btn btn-default" href="students/:id/delete/" role="button" style='width: 150px;'>DELETE STUDENTS</a>
-  </div>
-  <div class="row" style="height: 40px">
-    <a class="btn btn-default" href="students/:id/select" role="button" style='width: 150px;'>SELECT ELECTIVES</a>
-  </div>
-  <div class="row" style="height: 40px;">
-    <%= form_tag students_path, :method => 'get' do %>
-    <%= text_field_tag :search, params[:search] %>
-  </div>
-  <div class="row">
-    <%= submit_tag "Search", :name => nil %>
-  </div>
-  <% end %>
-</div>
-
-<p>
-<%= flash[:notice] %>
 <div class="col-md-10">
   <div class="row" style="height: 35px; background-color: #36ADAE; text-align: center;"><!-- fix border and text alignment -->
     <h4>Student List</h4>
@@ -46,5 +24,3 @@
       </tr>
     <% end %>
   </tbody> 
-
-

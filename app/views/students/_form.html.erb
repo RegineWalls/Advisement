@@ -24,7 +24,7 @@
     <%= f.input :email_address, :input_html => {:size => 30} %>
     <!-- Contact -->
     <%= f.input :contact_number, :input_html => {:maxlength => 11, :size => 25} %>
-    <br>
+  <br>
   </div>
 
   <div class="form-actions">
@@ -32,8 +32,9 @@
   </div>
 
   <% end %>
-  
-<h2>Import Students</h2>  
+
+<br>
+<h3>Import Students</h3>  
 <%= form_tag import_students_path, multipart: true do %>  
   <%= file_field_tag :file %>
   <br> 

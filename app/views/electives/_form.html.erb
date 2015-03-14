@@ -16,7 +16,7 @@
     <%= f.input :slots, :input_html => {:size => 35} %>
     <!-- Semester -->
     <%= f.input :semester, :input_html => {:size => 35} %>
-   <br>
+  <br>
   </div>
 
   <div class="form-actions">
@@ -24,6 +24,14 @@
   </div>
 
   <% end %>
+
+<br>
+<h3>Import Electives</h3>  
+<%= form_tag import_electives_path, multipart: true do %>  
+  <%= file_field_tag :file %>  
+  <br>
+  <%= submit_tag "Import" %>  
+<% end %> 
 
 <br>
 <br>

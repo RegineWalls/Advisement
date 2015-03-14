@@ -65,4 +65,14 @@ class StudentsController < ApplicationController
     @student = Student.find(params[:id])
     @electives = Elective.all
   end
+
+  def delete
+    @student = Student.all
+    render :template => "students/delete"
+  end
+
+  def select
+    @student = Student.all
+    render :template => "students/select"
+  end
 end

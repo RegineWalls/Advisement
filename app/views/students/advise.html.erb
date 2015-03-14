@@ -19,18 +19,18 @@
 <table class = "table table-hover">
   <thead>
     <tr>
+      <th style="width: 190px; text-align: center;">*</th>
       <th style="width: 190px; text-align: center;">Elective Code</th>
       <th style="text-align: center;">Name</th>
   </thead>
 <% @electives.each do |elective| %>
       <tr onclick="location.href='<%= elective_path(elective.id) %>'">
+        <td style="text-align: center;"><%= elective.elective_code %></td></td>
         <td style="text-align: center;"><%= elective.elective_code %></td>
         <td style="text-align: center;"><%= elective.name %></td>
-        <td style="text-align: center;"><%= link_to "Edit", edit_elective_path(elective) %></td>
-        <td style="text-align: center;"><%= link_to "Destroy", elective_path(elective.id), method: :delete, data: { confirm: "Are you sure?" } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-  <tbody>
+<tbody>
     
