@@ -3,8 +3,8 @@ Rails.application.routes.draw do
   root :to => "pages#index"
   resources :tracks
   resources :users
-  resources :students
   resources :electives
+  resources :students
   resources :delete
   resources :electives do
     collection {post :import }
@@ -12,6 +12,14 @@ Rails.application.routes.draw do
   resources :students do  
     collection { post :import }  
   end  
+
+  # get "/students", :to => "students#index", as: :students
+  # get "/student/:id", :to => "students#show", as: :student
+  # get "/students/new", :to => "students#new", as: :new_student
+  # post "/students", :to => "students#create", as: :create_student
+  # get "/students/:id/edit", :to => "students#edit", as: :edit_student
+  # post "/students/:id/update", :to => "students#update", as: :update_student
+  # match "/students/:id/advise" => "students#advise" via: => :get
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
