@@ -5,13 +5,17 @@ Rails.application.routes.draw do
   resources :users
   resources :electives
   resources :students
-  resources :delete
   resources :electives do
     collection {post :import }
   end
   resources :students do  
     collection { post :import }  
   end  
+  resources :students do
+    member do 
+      get 'advise'
+    end
+  end
 
   # get "/students", :to => "students#index", as: :students
   # get "/student/:id", :to => "students#show", as: :student

@@ -1,1 +1,36 @@
-<h1>Test</h1>
+<div class="col-md-3">
+  <div class="row" style="height: 40px">
+<h1><%= @student.name %></h1>
+
+<strong>ID Number</strong>: <%= @student.id_number %> <br>
+<strong>Year Level</strong>: <%= @student.year_level %> <br>
+<strong>Course</strong>: <%= @student.course %> <br>
+<strong>Track</strong>: <%= @student.track %> <br>
+<strong>Specialization</strong>: <%= @student.specialization %> <br>
+<strong>E-mail Address</strong>: <%= @student.email_address %> <br>
+<strong>Contact Number</strong>: <%= @student.contact_number %> <br>
+</div>
+</div>
+
+<div class="col-md-9" style="">
+  <div class="row" style="height: 35px; background-color: #36ADAE; text-align: center;"><!-- fix border and text alignment -->
+    <h4>Choose your Elective</h4>
+  </div>
+<table class = "table table-hover">
+  <thead>
+    <tr>
+      <th style="width: 190px; text-align: center;">Elective Code</th>
+      <th style="text-align: center;">Name</th>
+  </thead>
+<% @electives.each do |elective| %>
+      <tr onclick="location.href='<%= elective_path(elective.id) %>'">
+        <td style="text-align: center;"><%= elective.elective_code %></td>
+        <td style="text-align: center;"><%= elective.name %></td>
+        <td style="text-align: center;"><%= link_to "Edit", edit_elective_path(elective) %></td>
+        <td style="text-align: center;"><%= link_to "Destroy", elective_path(elective.id), method: :delete, data: { confirm: "Are you sure?" } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+  <tbody>
+    

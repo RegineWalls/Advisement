@@ -63,5 +63,6 @@ class StudentsController < ApplicationController
 
   def advise
     @student = Student.find(params[:id])
+    @electives = Elective.all
   end
 end
