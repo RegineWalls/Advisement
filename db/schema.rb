@@ -22,8 +22,8 @@ ActiveRecord::Schema.define(version: 20150312050201) do
     t.integer  "track_id"
   end
 
-  add_index "credits", ["student_id"], name: "index_credits_on_student_id"
-  add_index "credits", ["track_id"], name: "index_credits_on_track_id"
+  add_index "credits", ["student_id"], name: "index_credits_on_student_id", using: :btree
+  add_index "credits", ["track_id"], name: "index_credits_on_track_id", using: :btree
 
   create_table "electives", force: true do |t|
     t.string   "elective_code", null: false
@@ -46,11 +46,10 @@ ActiveRecord::Schema.define(version: 20150312050201) do
     t.integer  "track_id"
   end
 
-  add_index "requirements", ["elective_id"], name: "index_requirements_on_elective_id"
-  add_index "requirements", ["track_id"], name: "index_requirements_on_track_id"
+  add_index "requirements", ["elective_id"], name: "index_requirements_on_elective_id", using: :btree
+  add_index "requirements", ["track_id"], name: "index_requirements_on_track_id", using: :btree
 
-  create_table "students", id: false, force: true do |t|
-    t.integer  "id_number",               null: false
+  create_table "students", primary_key: "id_number", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "name"
@@ -70,7 +69,7 @@ ActiveRecord::Schema.define(version: 20150312050201) do
     t.string   "type"
   end
 
-  add_index "tracks", ["track_code"], name: "index_tracks_on_track_code"
+  add_index "tracks", ["track_code"], name: "index_tracks_on_track_code", using: :btree
 
   create_table "transcripts", force: true do |t|
     t.boolean  "status"
@@ -80,8 +79,8 @@ ActiveRecord::Schema.define(version: 20150312050201) do
     t.integer  "elective_id"
   end
 
-  add_index "transcripts", ["elective_id"], name: "index_transcripts_on_elective_id"
-  add_index "transcripts", ["student_id"], name: "index_transcripts_on_student_id"
+  add_index "transcripts", ["elective_id"], name: "index_transcripts_on_elective_id", using: :btree
+  add_index "transcripts", ["student_id"], name: "index_transcripts_on_student_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -98,7 +97,7 @@ ActiveRecord::Schema.define(version: 20150312050201) do
     t.datetime "updated_at"
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
 end
