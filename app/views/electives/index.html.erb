@@ -3,7 +3,7 @@
     <a class="btn btn-default" href="electives/new" role="button" style='width: 150px;'>ADD ELECTIVE</a>
   </div>
   <div class="row" style="height: 40px">
-    <a class="btn btn-default" href="electives/destroy" role="button" style='width: 150px;'>DELETE ELECTIVE</a>
+    <a class="btn btn-default" href="electives/delete" role="button" style='width: 150px;'>DELETE ELECTIVE</a>
   </div>
   <div class="row" style="height: 40px">
     <a class="btn btn-default" href="electives/select" role="button" style='width: 150px;'>SELECT ELECTIVE</a>
@@ -24,23 +24,22 @@
   <div class="row" style="height: 35px; background-color: #36ADAE; text-align: center;"><!-- fix border and text alignment -->
     <h4>Elective List</h4>
   </div>
- 
- 
-<table class = "table table-hover">
-  <thead>
-    <tr>
-      <th style="width: 190px; text-align: center;">Elective Code</th>
-      <th style="text-align: center;">Name</th>
-  </thead>
-
-  <tbody>
-    <% @electives.each do |elective| %>
+  <table class = "table table-hover">
+    <thead>
+      <tr>
+        <th style="width: 150px; text-align: center;">Elective Code</th>
+        <th style="text-align: center;">Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @electives.each do |elective| %>
       <tr onclick="location.href='<%= elective_path(elective.id) %>'">
         <td style="text-align: center;"><%= elective.elective_code %></td>
         <td style="text-align: center;"><%= elective.name %></td>
         <td style="text-align: center;"><%= link_to "Edit", edit_elective_path(elective) %></td>
         <td style="text-align: center;"><%= link_to "Destroy", elective_path(elective.id), method: :delete, data: { confirm: "Are you sure?" } %></td>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+      <% end %>
+    </tbody>
+  </table>
+</div>

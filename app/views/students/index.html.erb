@@ -6,7 +6,7 @@
     <a class="btn btn-default" href="students/destroy" role="button" style='width: 150px;'>DELETE STUDENTS</a>
   </div>
   <div class="row" style="height: 40px">
-    <a class="btn btn-default" href="students/select" role="button" style='width: 150px;'>SELECT ELECTIVES</a>
+    <a class="btn btn-default" href="students/" role="button" style='width: 150px;'>UNADVISED</a>
   </div>
   <div class="row" style="height: 40px;">
     <%= form_tag students_path, :method => 'get' do %>
@@ -18,8 +18,6 @@
   <% end %>
 </div>
 
-<p>
-<%= flash[:notice] %>
 <div class="col-md-10">
   <div class="row" style="height: 35px; background-color: #36ADAE; text-align: center;"><!-- fix border and text alignment -->
     <h4>Student List</h4>

@@ -9,10 +9,11 @@ class Student < ActiveRecord::Base
   has_many :tracks, :through => :credits
 
   validates :name, presence: true, uniqueness: true
-  validates :id_number, presence: true, uniqueness: true
+  validates :id_number, presence: true, uniqueness: true, length: { minimum: 6, maximum: 6 }, numericality: true
+  validates :year_level, presence: true
   validates :course, presence: true
   validates :email_address, presence: true
-  validates :contact_number, presence: true
+  validates :contact_number, presence: true, length: { minimum: 11, maximum: 13 }, numericality: true
   
  def self.search(search)
   if search
