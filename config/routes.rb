@@ -2,18 +2,16 @@ Rails.application.routes.draw do
   devise_for :users
   root :to => "pages#index"
   resources :tracks
+  resources :users
+  resources :students
   resources :electives
+  resources :delete
   resources :electives do
     collection {post :import }
   end
-  resources :students
   resources :students do  
     collection { post :import }  
   end  
-
-  
-
-  ###get 'students/:id_number', to: => "students#show"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
