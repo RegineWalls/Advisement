@@ -1,4 +1,4 @@
-<div class="col-md-10">
+<div class="col-md-13">
   <div class="row" style="height: 35px; background-color: #36ADAE; text-align: center;"><!-- fix border and text alignment -->
     <h4>Student List</h4>
   </div>
@@ -6,21 +6,21 @@
 <table class = "table table-hover">
   <thead>
     <tr>
-      <th style="text-align: center; width: 100px;">ID Number</th>
-      <th style="text-align: center; width: 250px;">Student Name</th>
-      <th style="text-align: center; width: 150px;">Year & Course</th>
+      <th style="text-align: center; width: 40px;"><input type="checkbox" id="selectAll" value="selectAll">
+      <th style="text-align: center; width: 200px;">ID Number</th>
+      <th style="text-align: center; width: 300px;">Student Name</th>
+      <th style="text-align: center; width: 300px;">Year & Course</th>
       <th style="text-align: center;">Track / Specialization</th>
   </thead>
 
   <tbody>
+  	
     <% @students.each do |student| %>
-      <tr  onclick="location.href='<%= student_path(student.id) %>'">
-        <td style="text-align: center;"><%= student.id_number %></td>
-        <td style="text-align: center;"><%= student.name %></td>
-        <td style="text-align: center;"><%= student.year_level %> <%= student.course %></td>
-        <td style="text-align: center;"><%= student.track %> / <%= student.specialization %></td>
-        <td style="text-align: center;"><%= link_to "Edit", edit_student_path(student) %></td>
-        <td style="text-align: center;"><%= link_to "Destroy", student_path(student.id), method: :delete, data: { confirm: "Are you sure?" } %></td>
-      </tr>
+      <td style="text-align: center;"><input type="checkbox" name="foo" value="bar4">
+      <td style="text-align: center;"><%= student.id_number %></td>
+      <td style="text-align: center;"><%= student.name %></td>
+      <td style="text-align: center;"><%= student.year_level %> <%= student.course %></td>
+      <td style="text-align: center;"><%= student.track %> / <%= student.specialization %></td>
+    </tr>
     <% end %>
   </tbody> 

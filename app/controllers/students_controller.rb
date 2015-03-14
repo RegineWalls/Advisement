@@ -67,12 +67,12 @@ class StudentsController < ApplicationController
   end
 
   def delete
-    @student = Student.all
+    @students = Student.all
     render :template => "students/delete"
   end
 
   def select
-    @student = Student.all
+    @students = Student.all
     render :template => "students/select"
   end
 end
