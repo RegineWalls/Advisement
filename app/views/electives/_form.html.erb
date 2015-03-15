@@ -2,20 +2,20 @@
 
 <div class="form-inputs">
     <!-- Code -->
-    <%= f.input :elective_code, :input_html => {:size => 40} %>
+    <%= f.input :elective_code, :label => 'Elective Code:', :input_html => {:size => 40} %>
     <!-- Name -->
-    <%= f.input :name, :input_html => {:size => 40} %>
+    <%= f.input :name, :label => 'Elective Name:', :input_html => {:size => 40} %>
     <!-- Prerequisistes -->
-    <%= f.input :prerequisites, :input_html => {:size => 40} %>
+    <%= f.input :prerequisites, :label => 'Prerequisistes:', :input_html => {:size => 40} %>
     <!-- Units -->
-    <%= f.input :units, :input_html => {:size => 35} %><p>
+    <%= f.input :units, :label => 'Units:', :input_html => {:size => 35, :min => 0, :max => 6} %><p>
     <!-- Description -->
     <%= f.label :description %><br>
     <%= f.text_area :description, size: "60x5" %>
     <!-- Slots -->
-    <%= f.input :slots, :input_html => {:size => 35} %>
+    <%= f.input :slots, :label => 'Slots:', :input_html => {:size => 35, :min => 0, :max => 60} %>
     <!-- Semester -->
-    <%= f.input :semester, :input_html => {:size => 35} %>
+    <%= f.input :semester, :label => 'Semester:', :input_html => {:size => 35, :min => 0, :max => 2} %>
   <br>
   </div>
 
@@ -26,12 +26,12 @@
   <% end %>
 
 <br>
-<h3>Import Electives</h3>  
-<%= form_tag import_electives_path, multipart: true do %>  
-  <%= file_field_tag :file %>  
+<h3>Import Electives</h3>
+<%= form_tag import_electives_path, multipart: true do %>
+  <%= file_field_tag :file %>
   <br>
-  <%= submit_tag "Import" %>  
-<% end %> 
+  <%= submit_tag "Import" %>
+<% end %>
 
 <br>
 <br>

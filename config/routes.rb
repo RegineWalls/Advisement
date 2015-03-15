@@ -8,35 +8,44 @@ Rails.application.routes.draw do
   resources :electives do
     collection {post :import }
   end
-  resources :students do  
-    collection { post :import }  
+  resources :students do
+    collection { post :import }
   end
   resources :students do
-    member do 
+    member do
       get 'advise'
     end
   end
   resources :students do
-    member do 
+    member do
       get 'delete'
     end
   end
   resources :students do
-    member do 
+    member do
       get 'select'
     end
   end
   resources :electives do
-    member do 
+    member do
       get 'delete'
     end
   end
   resources :electives do
-    member do 
+    member do
       get 'select'
     end
   end
-
+  resources :students do
+    collection do
+      delete 'destroy_multiple'
+    end
+  end
+  resources :electives do
+    collection do
+      delete 'destroy_multiple'
+    end
+  end
   # get "/students", :to => "students#index", as: :students
   # get "/student/:id", :to => "students#show", as: :student
   # get "/students/new", :to => "students#new", as: :new_student
@@ -85,7 +94,7 @@ Rails.application.routes.draw do
   #       get 'recent', on: :collection
   #     end
   #   end
-  
+
   # Example resource route with concerns:
   #   concern :toggleable do
   #     post 'toggle'
