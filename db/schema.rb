@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150317003700) do
+ActiveRecord::Schema.define(version: 20150317033220) do
 
   create_table "credits", force: true do |t|
     t.integer  "completed"
@@ -26,20 +26,19 @@ ActiveRecord::Schema.define(version: 20150317003700) do
   add_index "credits", ["track_id"], name: "index_credits_on_track_id", using: :btree
 
   create_table "electives", force: true do |t|
-    t.string   "elective_code", null: false
+    t.string   "elective_code", limit: 10
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "name"
-    t.integer  "units"
-    t.string   "description"
-    t.integer  "semester"
+    t.string   "name",          limit: 150
+    t.string   "units",         limit: 1
+    t.string   "description",   limit: 140
+    t.string   "semester",      limit: 1
     t.integer  "slots"
-    t.string   "prerequisites"
+    t.string   "prerequisites", limit: 40
   end
 
   create_table "requirements", force: true do |t|
-    t.integer  "semester"
-    t.boolean  "is_required"
+    t.string   "semester",    limit: 1
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "elective_id"
@@ -65,16 +64,17 @@ ActiveRecord::Schema.define(version: 20150317003700) do
   create_table "tracks", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "track_code"
-    t.string   "type"
+    t.string   "track_code",  limit: 30
+    t.string   "type",        limit: 25
+    t.string   "description", limit: 140
   end
 
   add_index "tracks", ["track_code"], name: "index_tracks_on_track_code", using: :btree
 
   create_table "transcripts", force: true do |t|
-    t.boolean  "status"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.boolean  "status",      default: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
     t.integer  "student_id"
     t.integer  "elective_id"
   end
