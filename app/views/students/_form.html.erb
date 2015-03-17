@@ -2,11 +2,11 @@
   
   <div class="form-inputs">
     <!-- Id number -->
-    <%= f.input :id_number, :input_html => {:size => 6} %>
+    <%= f.input :id_number, :label => 'ID Number:', :input_html => {:size => 6} %>
     <!-- Name -->
-    <%= f.input :name, :input_html => {:size => 40} %>
+    <%= f.input :name, :label => 'Name:', :input_html => {:size => 40} %>
     <!-- Year Level -->
-    <%= f.input :year_level, as: :radio_buttons, :collection => ['2nd', '3rd', '4th'] %>
+    <%= f.input :year_level, :label => 'Year Level:', as: :radio_buttons, :collection => ['2nd', '3rd', '4th'] %>
     <!-- Course -->
     <%= f.label :course %>
     <%= f.select :course, :collection => ['BS MIS', 'BS MIS-MSCS', 'BS CS', 'BS CS-MSCS'] %><p>
@@ -21,10 +21,15 @@
     <%= f.label :specialization %>
     <%= f.select :specialization, :collection => ['Enterprise Systems', 'Business Intelligence', 'Interactive Multimedia', 'N/A'] %>
     <!-- Email -->
-    <%= f.input :email_address, :input_html => {:size => 30} %>
+    <%= f.input :email_address, :label => 'Email Address:', :input_html => {:size => 30} %>
     <!-- Contact -->
+<<<<<<< HEAD
     <%= f.input :contact_number, :input_html => {:maxlength => 11, :size => 25} %>
   <br>
+=======
+    <%= f.input :contact_number, :label => 'Contact Number:', :input_html => {:maxlength => 11, :size => 25} %>
+    <br>
+>>>>>>> 328759be31ccc9a88592181c7b38fe36424cdd10
   </div>
 
   <div class="form-actions">
@@ -32,6 +37,7 @@
   </div>
 
   <% end %>
+<<<<<<< HEAD
 
 <br>
 <h3>Import Students</h3>  
@@ -40,6 +46,8 @@
   <br> 
   <%= submit_tag "Import" %>  
 <% end %> 
+=======
+>>>>>>> 328759be31ccc9a88592181c7b38fe36424cdd10
 
 <br>
 <br>

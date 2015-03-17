@@ -5,7 +5,7 @@
 #   gem 'sqlite3'
 development:
   adapter: mysql
-  database: Advisement_development
+  database: Advisement_development 
   pool: 5
   username: root
   password:
