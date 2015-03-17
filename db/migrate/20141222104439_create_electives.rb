@@ -4,6 +4,6 @@ class CreateElectives < ActiveRecord::Migration
       t.string :elective_code, :null => false
       t.timestamps
     end
-   # execute "ALTER TABLE electives ADD PRIMARY KEY (elective_code);"
+    #execute "ALTER TABLE electives ADD PRIMARY KEY (elective_code);"
   end
 end

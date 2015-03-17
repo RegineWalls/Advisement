@@ -18,13 +18,11 @@
   <% end %>
 </div>
 
-<p>
-<%= flash[:notice] %>
 <div class="col-md-10">
   <div class="row" style="height: 35px; background-color: #36ADAE; text-align: center;"><!-- fix border and text alignment -->
     <h4>Student List</h4>
   </div>
- 
+
 <table class = "table table-hover">
   <thead>
     <tr>
@@ -45,6 +43,4 @@
         <td style="text-align: center;"><%= link_to "Destroy", student_path(student.id), method: :delete, data: { confirm: "Are you sure?" } %></td>
       </tr>
     <% end %>
-  </tbody> 
-
-
+  </tbody>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150312050201) do
+ActiveRecord::Schema.define(version: 20150317003700) do
 
   create_table "credits", force: true do |t|
     t.integer  "completed"
@@ -54,11 +54,11 @@ ActiveRecord::Schema.define(version: 20150312050201) do
     t.datetime "updated_at"
     t.string   "name"
     t.integer  "year_level"
-    t.string   "course"
-    t.string   "track"
-    t.string   "specialization"
-    t.string   "email_address"
-    t.string   "contact_number"
+    t.string   "course",                  limit: 20
+    t.string   "track",                   limit: 25
+    t.string   "specialization",          limit: 25
+    t.string   "email_address",           limit: 30
+    t.string   "contact_number",          limit: 11
     t.boolean  "advisement_accomplished"
   end
 
