@@ -25,12 +25,7 @@ ActiveRecord::Schema.define(version: 20150317033220) do
   add_index "credits", ["student_id"], name: "index_credits_on_student_id", using: :btree
   add_index "credits", ["track_id"], name: "index_credits_on_track_id", using: :btree
 
-<<<<<<< HEAD
   create_table "electives", primary_key: "elective_code", force: true do |t|
-=======
-  create_table "electives", force: true do |t|
-    t.string   "elective_code", limit: 10
->>>>>>> 2639412c2fa7e13b337159a1feecb3346ecc7dfd
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "name",          limit: 150
