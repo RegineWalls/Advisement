@@ -4,8 +4,12 @@
 
 <%= render 'form' %>
 
-<%= link_to "Back", students_path %> |
-<%= link_to "Home", root_path %>
+<h2>Import Students</h2>  
+<%= form_tag import_students_path, multipart: true do %>  
+  <%= file_field_tag :file %>
+  <br> 
+  <%= submit_tag "Import" %>  
+<% end %>
+<br>
 
-</div>
-</div>
+<%= link_to "Back", students_path %>

@@ -8,14 +8,14 @@
     <!-- Prerequisistes -->
     <%= f.input :prerequisites, :label => 'Prerequisistes:', :input_html => {:size => 40} %>
     <!-- Units -->
-    <p><%= f.input :units, :label => 'Units:', :input_html => {:size => 3, :min => 0, :max => 6} %>
+    <%= f.input :units, :label => 'Units:', :input_html => {:size => 35, :min => 0, :max => 6} %><p>
     <!-- Description -->
-    <%= f.label :description, :label => 'Description:' %><br>
+    <%= f.label :description %><br>
     <%= f.text_area :description, size: "60x5" %>
-    <p><!-- Slots -->
-    <%= f.input :slots, :label => 'Slots:', :input_html => {:size => 3, :min => 0, :max => 60} %>
-    <p><!-- Semester -->
-    <%= f.input :semester, :label => 'Semester:', :input_html => {:size => 3, :min => 0, :max => 2} %>
+    <!-- Slots -->
+    <%= f.input :slots, :label => 'Slots:', :input_html => {:size => 35, :min => 0, :max => 60} %>
+    <!-- Semester -->
+    <%= f.input :semester, :label => 'Semester:', :input_html => {:size => 35, :min => 0, :max => 2} %>
   <br>
   </div>
 
@@ -32,4 +32,7 @@
   <br>
   <%= submit_tag "Import" %>
 <% end %>
+
 <br>
+<br>
+<%= link_to "Back to Home", root_path %>
