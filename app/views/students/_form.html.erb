@@ -1,8 +1,12 @@
 <%= simple_nested_form_for(@student) do |f| %>
-  
+
   <div class="form-inputs">
     <!-- Id number -->
+<<<<<<< HEAD
     <%= f.input :id_number, :label => 'ID Number:', :input_html => {:size => 6} %>
+=======
+    <%= f.input :id_number, :label => 'ID Number:', :input_html => {:size => 6, :min => 0} %>
+>>>>>>> 2639412c2fa7e13b337159a1feecb3346ecc7dfd
     <!-- Name -->
     <%= f.input :name, :label => 'Name:', :input_html => {:size => 40} %>
     <!-- Year Level -->
@@ -24,12 +28,17 @@
     <%= f.input :email_address, :label => 'Email Address:', :input_html => {:size => 30} %>
     <!-- Contact -->
 <<<<<<< HEAD
+<<<<<<< HEAD
     <%= f.input :contact_number, :input_html => {:maxlength => 11, :size => 25} %>
   <br>
 =======
     <%= f.input :contact_number, :label => 'Contact Number:', :input_html => {:maxlength => 11, :size => 25} %>
     <br>
 >>>>>>> 328759be31ccc9a88592181c7b38fe36424cdd10
+=======
+    <%= f.input :contact_number, :label => 'Contact Number:', :input_html => {:maxlength => 11, :size => 25} %>
+    <br>
+>>>>>>> 2639412c2fa7e13b337159a1feecb3346ecc7dfd
   </div>
 
   <div class="form-actions">
@@ -39,6 +48,7 @@
   <% end %>
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 <br>
 <h3>Import Students</h3>  
 <%= form_tag import_students_path, multipart: true do %>  
@@ -48,6 +58,15 @@
 <% end %> 
 =======
 >>>>>>> 328759be31ccc9a88592181c7b38fe36424cdd10
+=======
+  <br>
+  <h3>Import Students</h3>
+  <%= form_tag import_students_path, multipart: true do %>
+    <%= file_field_tag :file %>
+    <br>
+    <%= submit_tag "Import" %>
+  <% end %>
+>>>>>>> 2639412c2fa7e13b337159a1feecb3346ecc7dfd
 
 <br>
 <br>

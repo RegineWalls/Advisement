@@ -69,6 +69,24 @@ class StudentsController < ApplicationController
     render :template => "students/delete"
   end
 
+  def destroy
+    Student.destroy(params[:ids])
+
+      respond_to do |format|
+       format.html { redirect_to students_url }
+       format.json { head :no_content }
+      end
+    end
+
+   def destroy_multiple
+      Student.destroy(params[:ids])
+
+      respond_to do |format|
+      format.html { redirect_to students_path }
+      format.json { head :no_content }
+    end
+  end
+
   def select
     @students = Student.all
     render :template => "students/select"

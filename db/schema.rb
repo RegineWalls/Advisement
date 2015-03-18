@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150312050201) do
+ActiveRecord::Schema.define(version: 20150317033220) do
 
   create_table "credits", force: true do |t|
     t.integer  "completed"
@@ -25,20 +25,24 @@ ActiveRecord::Schema.define(version: 20150312050201) do
   add_index "credits", ["student_id"], name: "index_credits_on_student_id", using: :btree
   add_index "credits", ["track_id"], name: "index_credits_on_track_id", using: :btree
 
+<<<<<<< HEAD
   create_table "electives", primary_key: "elective_code", force: true do |t|
+=======
+  create_table "electives", force: true do |t|
+    t.string   "elective_code", limit: 10
+>>>>>>> 2639412c2fa7e13b337159a1feecb3346ecc7dfd
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "name"
-    t.integer  "units"
-    t.string   "description"
-    t.integer  "semester"
+    t.string   "name",          limit: 150
+    t.string   "units",         limit: 1
+    t.string   "description",   limit: 140
+    t.string   "semester",      limit: 1
     t.integer  "slots"
-    t.string   "prerequisites"
+    t.string   "prerequisites", limit: 40
   end
 
   create_table "requirements", force: true do |t|
-    t.integer  "semester"
-    t.boolean  "is_required"
+    t.string   "semester",    limit: 1
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "elective_id"
@@ -53,27 +57,28 @@ ActiveRecord::Schema.define(version: 20150312050201) do
     t.datetime "updated_at"
     t.string   "name"
     t.integer  "year_level"
-    t.string   "course"
-    t.string   "track"
-    t.string   "specialization"
-    t.string   "email_address"
-    t.string   "contact_number"
+    t.string   "course",                  limit: 20
+    t.string   "track",                   limit: 25
+    t.string   "specialization",          limit: 25
+    t.string   "email_address",           limit: 30
+    t.string   "contact_number",          limit: 11
     t.boolean  "advisement_accomplished"
   end
 
   create_table "tracks", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "track_code"
-    t.string   "type"
+    t.string   "track_code",  limit: 30
+    t.string   "type",        limit: 25
+    t.string   "description", limit: 140
   end
 
   add_index "tracks", ["track_code"], name: "index_tracks_on_track_code", using: :btree
 
   create_table "transcripts", force: true do |t|
-    t.boolean  "status"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.boolean  "status",      default: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
     t.integer  "student_id"
     t.integer  "elective_id"
   end

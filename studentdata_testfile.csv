@@ -1,4 +1,5 @@
 id_number,name,year_level,course,track,specialization,email_address,contact_number
+<<<<<<< HEAD
 123456,John Brown,3,BS MIS,none,Business Intelligence,bleh@boo.com,9081112222
 123457,Kevin Uy,4,BS MIS,none,Enterprise Systems,bleh@boo.com,9081112222
 123458,Bianca Tuazon,2,BS MIS,none,Interactive Multimedia,bleh@boo.com,9081112222
@@ -11,3 +12,17 @@ id_number,name,year_level,course,track,specialization,email_address,contact_numb
 124124,Julia Montes,3,BS MIS,Business Intelligence,none,bleh@boo.com,9081112222
 124125,Enrique Gil,2,BS MIS,Enterprise Systems,Business Intelligence,bleh@boo.com,9081112222
 124126,Angel Locsin,3,BS MIS,Interactive Multimedia,Business Intelligence,angel@locsin.com,9081112221
+=======
+123456,John Brown,3,BS MIS,none,Business Intelligence,bleh@boo.com,09081112222
+123467,Kevin Uy,4,BS MIS,none,Enterprise Systems,bleh@boo.com,09081112222
+123478,Bianca Tuazon,2,BS MIS,none,Interactive Multimedia,bleh@boo.com,09081112222
+123489,John Cruz,4,BS MIS,Enterprise Systems,Interactive Multimedia,bleh@boo.com,09081112222
+123490,Manny Pacquiao,3,BS MIS,Enterprise Systems,Business Intelligence,bleh@boo.com,09081112222
+124123,Anne Curtis,3,BS MIS,none,Business Intelligence,bleh@boo.com,09081112222
+124134,Lea Salonga,2,BS MIS,Business Intelligence,Business Intelligence,bleh@boo.com,09081112222
+124145,Sarah Geronimo,3,BS MIS,Interactive Multimedia,none,bleh@boo.com,09081112222
+124156,Daniel Padilla,2,BS MIS,Enterprise Systems,none,bleh@boo.com,09081112222
+124167,Julia Montes,3,BS MIS,Business Intelligence,none,bleh@boo.com,09081112222
+124178,Enrique Gil,2,BS MIS,Enterprise Systems,Business Intelligence,bleh@boo.com,09081112222
+124189,Angel Locsin,3,BS MIS,Interactive Multimedia,Business Intelligence,angel@locsin.com,09081112221
+>>>>>>> 2639412c2fa7e13b337159a1feecb3346ecc7dfd
