@@ -23,7 +23,7 @@ Rails.application.routes.draw do
   end
   resources :students do
     member do
-      get 'select'
+      get 'roster'
     end
   end
   resources :electives do
