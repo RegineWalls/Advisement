@@ -13,13 +13,13 @@
       <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
     <% end %>
 
-    <%= f.input :password, autocomplete: "off", hint: "leave it blank if you don't want to change it", required: false, :input_html => {:size => 25} %>
+    <%= f.input :password, autocomplete: "off", placeholder: "blank if no changes", required: false, :input_html => {:size => 25} %>
     <%= f.input :password_confirmation, required: false, :input_html => {:size => 25} %>
-    <%= f.input :current_password, hint: "we need your current password to confirm your changes", required: true, :input_html => {:size => 25} %>
+    <%= f.input :current_password, placeholder: "current password to confirm", required: true, :input_html => {:size => 25} %>
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, "Update" %>
+    <br><%= f.button :submit, "Update" %>
   </div>
 <% end %>
 
