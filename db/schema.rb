@@ -57,7 +57,7 @@ ActiveRecord::Schema.define(version: 20150317033220) do
     t.string   "specialization",          limit: 25
     t.string   "email_address",           limit: 30
     t.string   "contact_number",          limit: 11
-    t.boolean  "advisement_accomplished"
+    t.boolean  "advisement_accomplished",            default: false
   end
 
   create_table "tracks", force: true do |t|

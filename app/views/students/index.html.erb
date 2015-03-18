@@ -30,6 +30,7 @@
       <th style="text-align: center; width: 250px;">Student Name</th>
       <th style="text-align: center; width: 150px;">Year & Course</th>
       <th style="text-align: center;">Track / Specialization</th>
+    </tr>
   </thead>
 
   <tbody>
@@ -39,8 +40,8 @@
         <td style="text-align: center;"><%= student.name %></td>
         <td style="text-align: center;"><%= student.year_level %> <%= student.course %></td>
         <td style="text-align: center;"><%= student.track %> / <%= student.specialization %></td>
-        <td style="text-align: center;"><%= link_to "Edit", edit_student_path(student) %></td>
         <td style="text-align: center;"><%= link_to "Destroy", student_path(student.id), method: :delete, data: { confirm: "Are you sure?" } %></td>
       </tr>
     <% end %>
   </tbody>
+</table>

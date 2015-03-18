@@ -2,7 +2,7 @@
 
   <div class="form-inputs">
     <!-- Id number -->
-    <%= f.input :id_number, :label => 'ID Number:', :input_html => {:size => 6, :min => 0} %>
+    <%= f.input :id_number, as: :string, :label => 'ID Number:', :input_html => {:size => 8, :min => 100000} %>
     <!-- Name -->
     <%= f.input :name, :label => 'Name:', :input_html => {:size => 40} %>
     <!-- Year Level -->
@@ -15,10 +15,10 @@
     Current database has no capacity to accept that for now. -->
 
     <!-- Track -->
-    <%= f.label :track %>
+    <%= f.label :track, :label => 'Track:' %>
     <%= f.select :track, :collection => ['Enterprise Systems', 'Business Intelligence', 'Interactive Multimedia', 'N/A'] %><p>
     <!-- Spec -->
-    <%= f.label :specialization %>
+    <%= f.label :specialization, :label => 'Specialization:' %>
     <%= f.select :specialization, :collection => ['Enterprise Systems', 'Business Intelligence', 'Interactive Multimedia', 'N/A'] %>
     <!-- Email -->
     <%= f.input :email_address, :label => 'Email Address:', :input_html => {:size => 30} %>
@@ -33,5 +33,11 @@
 
   <% end %>
 <br>
+
+<h3>Import Students</h3>  
+<%= form_tag import_students_path, multipart: true do %>  
+  <%= file_field_tag :file %>
+  <br> 
+  <%= submit_tag "Import" %>  
+<% end %>
 <br>
-<%= link_to "Back to Home", root_path %>
