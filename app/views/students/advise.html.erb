@@ -2,13 +2,13 @@
   <div class="row" style="height: 40px">
 <h1><%= @student.name %></h1>
 
-<strong>ID Number</strong>: <%= @student.id_number %> <br>
-<strong>Year Level</strong>: <%= @student.year_level %> <br>
-<strong>Course</strong>: <%= @student.course %> <br>
-<strong>Track</strong>: <%= @student.track %> <br>
-<strong>Specialization</strong>: <%= @student.specialization %> <br>
-<strong>E-mail Address</strong>: <%= @student.email_address %> <br>
-<strong>Contact Number</strong>: <%= @student.contact_number %> <br>
+<strong>ID Number:</strong> <%= @student.id_number %> <br>
+<strong>Year Level:</strong> <%= @student.year_level %> <br>
+<strong>Course:</strong> <%= @student.course %> <br>
+<strong>Track:</strong> <%= @student.track %> <br>
+<strong>Specialization:</strong> <%= @student.specialization %> <br>
+<strong>E-mail Address:</strong> <%= @student.email_address %> <br>
+<strong>Contact Number:</strong> <%= @student.contact_number %> <br>
 </div>
 </div>
 
@@ -20,15 +20,17 @@
 <table class = "table table-hover">
   <thead>
     <tr>
-      <th style="text-align: center; width: 50px;"><input type="checkbox" id="selectAll" value="selectAll">
-      <th style="width: 300px; text-align: center;">Elective Code</th>
-      <th style="width: 300px; text-align: center;">Name</th>
+      <th></th>
+      <th style="width: 150px; text-align: center;">Elective Code</th>
+      <th style="text-align: center;">Name</th>
   </thead>
-<% @electives.each do |elective| %>
-        <td style="text-align: center;"><input type="checkbox" name="foo" value="bar4">
-        <td style="text-align: center;"><%= elective.elective_code %></td>
-        <td style="text-align: center;"><%= elective.name %></td>
-      </tr>
+  <tbody>
+    <% @electives.each do |elective| %>
+    <tr>
+      <td><%= check_box_tag "electives[]", elective.elective_code %></td>
+      <td style="text-align: center;"><%= elective.elective_code %></td>
+      <td style="text-align: center;"><%= elective.name %></td>
+    </tr>
     <% end %>
   </tbody>
 </table>
