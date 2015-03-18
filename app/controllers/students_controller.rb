@@ -87,8 +87,8 @@ class StudentsController < ApplicationController
     end
   end
 
-  def select
+  def roster
     @students = Student.all
-    render :template => "students/select"
+    render :template => "students/roster"
   end
 end

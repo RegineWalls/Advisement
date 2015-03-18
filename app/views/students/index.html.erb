@@ -5,9 +5,6 @@
   <div class="row" style="height: 40px">
     <a class="btn btn-default" href="students/:id/delete" role="button" style='width: 150px;'>DELETE STUDENTS</a>
   </div>
-  <div class="row" style="height: 40px">
-    <a class="btn btn-default" href="students/" role="button" style='width: 150px;'>UNADVISED</a>
-  </div>
   <div class="row" style="height: 40px;">
     <%= form_tag students_path, :method => 'get' do %>
     <%= text_field_tag :search, params[:search] %>
