@@ -11,9 +11,9 @@ class Elective < ActiveRecord::Base
   validates :name, presence: true, uniqueness: true
   validates :elective_code, presence: true, uniqueness: true
   validates :prerequisites, presence: true
-  validates :units, presence: true
-  validates :slots, presence: true
-  validates :semester, presence: true
+  validates :units, presence: true, numericality: true
+  validates :slots, presence: true, numericality: true
+  validates :semester, presence: true, numericality: true
 
   # External CSV File Import funtion
   def self.import(file)  

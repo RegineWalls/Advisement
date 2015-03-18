@@ -8,17 +8,17 @@
     <!-- Year Level -->
     <%= f.input :year_level, :label => 'Year Level:', as: :radio_buttons, :collection => ['2nd', '3rd', '4th'] %>
     <!-- Course -->
-    <%= f.label :course %>
+    <%= f.label :course, :label => 'Course:' %>
     <%= f.select :course, :collection => ['BS MIS', 'BS MIS-MSCS', 'BS CS', 'BS CS-MSCS'] %><p>
 
     <!-- REMEMBER TO CHANGE DROPDOWN TO CHECKBOXES TO ACCEPT MULTIPLE TRACKS AND SPECS.
     Current database has no capacity to accept that for now. -->
 
     <!-- Track -->
-    <%= f.label :track %>
+    <%= f.label :track, :label => 'Track:' %>
     <%= f.select :track, :collection => ['Enterprise Systems', 'Business Intelligence', 'Interactive Multimedia', 'N/A'] %><p>
     <!-- Spec -->
-    <%= f.label :specialization %>
+    <%= f.label :specialization, :label => 'Specialization:' %>
     <%= f.select :specialization, :collection => ['Enterprise Systems', 'Business Intelligence', 'Interactive Multimedia', 'N/A'] %>
     <!-- Email -->
     <%= f.input :email_address, :label => 'Email Address:', :input_html => {:size => 30} %>
@@ -32,14 +32,14 @@
   </div>
 
   <% end %>
-
   <br>
-  <h3>Import Students</h3>
-  <%= form_tag import_students_path, multipart: true do %>
-    <%= file_field_tag :file %>
-    <br>
-    <%= submit_tag "Import" %>
-  <% end %>
+
+<h3>Import Students</h3>
+<%= form_tag import_students_path, multipart: true do %>  
+  <%= file_field_tag :file %>
+  <br> 
+  <%= submit_tag "Import" %>  
+<% end %>
 
 <br>
 <br>

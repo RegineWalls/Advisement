@@ -37,6 +37,16 @@ class TracksController < ApplicationController
     end
   end
 
+# CSV Import Function
+  def import
+    begin
+      Track.import(params[:file])
+      redirect_to tracks_path, notice: "Tracks imported."
+    rescue
+      redirect_to tracks_path, notice: "Invalid CSV file format."
+    end
+  end
+
   # PATCH/PUT /tracks/1
   # PATCH/PUT /tracks/1.json
   def update

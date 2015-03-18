@@ -1,17 +1,30 @@
-<%= form_for(@track) do |f| %>
-  <% if @track.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@track.errors.count, "error") %> prohibited this track from being saved:</h2>
+<%= simple_nested_form_for(@track) do |f| %>
 
-      <ul>
-      <% @track.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="actions">
-    <%= f.submit %>
+<div class="form-inputs">
+    <!-- Code -->
+    <%= f.input :track_code, :label => 'Track Code:', :placeholder => 'BI SPEC', :input_html => {:size => 15} %>
+    <!-- Name -->
+    <%= f.input :name, :label => 'Name:', :placeholder => 'Business Intelligence', :input_html => {:size => 30} %>
+    <!-- Description -->
+    <%= f.label :description, :label => 'Description:' %><br>
+    <%= f.text_area :description, size: "60x5" %>
+  <br>
   </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+
+  <% end %>
+  <br>
+
+<h3>Import Tracks</h3>
+<%= form_tag import_tracks_path, multipart: true do %>  
+  <%= file_field_tag :file %>
+  <br> 
+  <%= submit_tag "Import" %>  
 <% end %>
+
+<br>
+<br>
+<%= link_to "Back to Home", root_path %>

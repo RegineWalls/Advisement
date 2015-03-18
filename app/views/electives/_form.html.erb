@@ -6,16 +6,16 @@
     <!-- Name -->
     <%= f.input :name, :label => 'Elective Name:', :input_html => {:size => 40} %>
     <!-- Prerequisistes -->
-    <%= f.input :prerequisites, :label => 'Prerequisistes:', :input_html => {:size => 40} %>
+    <%= f.input :prerequisites, :label => 'Prerequisites:', :input_html => {:size => 40} %>
     <!-- Units -->
-    <%= f.input :units, :label => 'Units:', :input_html => {:size => 35, :min => 0, :max => 6} %><p>
+    <p><%= f.input :units, :label => 'Units:', :input_html => {:size => 3, :min => 0, :max => 6} %>
     <!-- Description -->
-    <%= f.label :description %><br>
+    <%= f.label :description, :label => 'Description:' %><br>
     <%= f.text_area :description, size: "60x5" %>
     <!-- Slots -->
-    <%= f.input :slots, :label => 'Slots:', :input_html => {:size => 35, :min => 0, :max => 60} %>
+    <%= f.input :slots, :label => 'Slots:', :input_html => {:size => 3, :min => 0, :max => 60} %>
     <!-- Semester -->
-    <%= f.input :semester, :label => 'Semester:', :input_html => {:size => 35, :min => 0, :max => 2} %>
+    <p><%= f.input :semester, :label => 'Semester:', :input_html => {:size => 3, :min => 0, :max => 2} %>
   <br>
   </div>
 

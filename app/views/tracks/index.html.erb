@@ -1,25 +1,35 @@
-<h1>Listing tracks</h1>
+<div class="col-md-2">
+  <div class="row" style="height: 40px">
+    <a class="btn btn-default" href="tracks/new" role="button" style='width: 150px;'>ADD TRACK</a>
+  </div>
+  <div class="row" style="height: 40px">
+    <a class="btn btn-default" href="students/:id/delete" role="button" style='width: 150px;'>DELETE TRACKS</a>
+  </div>
+  <div class="row" style="height: 40px">
+    <a class="btn btn-default" href="students/" role="button" style='width: 150px;'>UNADVISED</a>
+  </div>
+</div>
 
-<table>
-  <thead>
-    <tr>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @tracks.each do |track| %>
+<div class="col-md-10">
+  <div class="row" style="height: 35px; background-color: #36ADAE; text-align: center;"><!-- fix border and text alignment -->
+    <h4>Tracks</h4>
+  </div>
+  <table class = "table table-hover">
+    <thead>
       <tr>
-        <td><%= link_to 'Show', track %></td>
-        <td><%= link_to 'Edit', edit_track_path(track) %></td>
-        <td><%= link_to 'Destroy', track, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+        <th style="text-align: center; width: 150px;">Track</th>
+        <th style="text-align: center; width: 550px;">Description</th>
+    </thead>
 
-<br>
-
-<%= link_to 'New Track', new_track_path %>
+    <tbody>
+      <% @tracks.each do |track| %>
+        <tr  onclick="location.href='<%= track_path(track.id) %>'">
+        <td style="text-align: center;"><%= track.type %></td>
+        <td style="text-align: center;"><%= track.description %></td>
+        <td style="text-align: center;"><%= link_to "Edit", edit_track_path(track) %></td>
+        <td style="text-align: center;"><%= link_to "Destroy", track_path(track.id), method: :delete, data: { confirm: "Are you sure?" } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

@@ -25,8 +25,7 @@ ActiveRecord::Schema.define(version: 20150317033220) do
   add_index "credits", ["student_id"], name: "index_credits_on_student_id", using: :btree
   add_index "credits", ["track_id"], name: "index_credits_on_track_id", using: :btree
 
-  create_table "electives", force: true do |t|
-    t.string   "elective_code", limit: 10
+  create_table "electives", primary_key: "elective_code", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "name",          limit: 150
@@ -58,18 +57,16 @@ ActiveRecord::Schema.define(version: 20150317033220) do
     t.string   "specialization",          limit: 25
     t.string   "email_address",           limit: 30
     t.string   "contact_number",          limit: 11
-    t.boolean  "advisement_accomplished"
+    t.boolean  "advisement_accomplished",            default: false
   end
 
   create_table "tracks", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "track_code",  limit: 30
-    t.string   "type",        limit: 25
+    t.string   "name",        limit: 25
     t.string   "description", limit: 140
   end
-
-  add_index "tracks", ["track_code"], name: "index_tracks_on_track_code", using: :btree
 
   create_table "transcripts", force: true do |t|
     t.boolean  "status",      default: false

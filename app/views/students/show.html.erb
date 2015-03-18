@@ -9,7 +9,12 @@
   	<strong>Specialization: </strong> <%= @student.specialization %> <br>
   	<strong>E-mail Address: </strong> <%= @student.email_address %> <br>
   	<strong>Contact Number: </strong> <%= @student.contact_number %> <br>
-  	<strong>Advisement Status: </strong> <%= @student.advisement_accomplished %> <br>
+  	<strong>Advisement Status: </strong>
+  	<% if @student.advisement_accomplished == false %>
+  	Unadvised
+  	<% else %>
+  	Advised
+  	<% end %> <br>
   	<br>
   	<%= link_to "Edit", edit_student_path(@student) %> |
   	<%= link_to "Advise", advise_student_path(@student) %> |
@@ -29,14 +34,14 @@
 			</thead>
 			<tbody>
 				<tr>
-					<td style="text-align: center;"></td>
+					<td></td>
 					<td style="text-align: center;">
 						<strong style="font-size: 18px;">Third Year</strong>
 					</td>
-					<td style="text-align: center;"></td>
+					<td></td>
 				</tr>
 				<tr>
-					<td style="text-align: center;"></td>
+					<td></td>
 					<td style="text-align: center;">
 						<strong>Summer Semester</strong>
 						<table class="table table-stiped" style='font-size: 11px;'>
@@ -52,7 +57,7 @@
 							</tbody>
 						</table>
 					</td>
-					<td style="text-align: center;"></td>
+					<td></td>
 				</tr>
 				<tr>
 					<td style="text-align: center;">
@@ -70,7 +75,7 @@
 							</tbody>
 						</table>
 					</td>
-					<td style="text-align: center;"></td>
+					<td></td>
 					<td style="text-align: center;">
 						<strong>Second Semester</strong>
 						<table class="table table-stiped" style='font-size: 11px;'>
@@ -88,14 +93,14 @@
 					</td>
 				</tr>
 				<tr>
-					<td style="text-align: center;"></td>
+					<td></td>
 					<td style="text-align: center;">
 						<strong style="font-size: 18px;">Fourth Year</strong>
 					</td>
 					<td style="text-align: center;"></td>
 				</tr>
 				<tr>
-					<td style="text-align: center;"></td>
+					<td></td>
 					<td style="text-align: center;">
 						<strong>Summer Semester</strong>
 						<table class="table table-stiped" style='font-size: 11px;'>
@@ -111,7 +116,7 @@
 							</tbody>
 						</table>
 					</td>
-					<td style="text-align: center;"></td>
+					<td></td>
 				</tr>
 				<tr>
 					<td style="text-align: center;">
@@ -129,7 +134,7 @@
 							</tbody>
 						</table>
 					</td>
-					<td style="text-align: center;"></td>
+					<td></td>
 					<td style="text-align: center;">
 						<strong>Second Semester</strong>
 						<table class="table table-stiped" style='font-size: 11px;'>

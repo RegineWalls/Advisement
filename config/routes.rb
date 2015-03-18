@@ -46,6 +46,9 @@ Rails.application.routes.draw do
       delete 'destroy_multiple'
     end
   end
+  resources :tracks do
+    collection {post :import }
+  end
   # get "/students", :to => "students#index", as: :students
   # get "/student/:id", :to => "students#show", as: :student
   # get "/students/new", :to => "students#new", as: :new_student
