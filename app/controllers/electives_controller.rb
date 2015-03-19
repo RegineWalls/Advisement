@@ -65,14 +65,14 @@ class ElectivesController < ApplicationController
     render :template => "electives/delete"
   end
 
-  def destroy
-    Elective.destroy(params[:ids])
+  # def destroy
+  #   Elective.destroy(params[:ids])
 
-      respond_to do |format|
-       format.html { redirect_to electives_url }
-       format.json { head :no_content }
-      end
-    end
+  #     respond_to do |format|
+  #      format.html { redirect_to electives_url }
+  #      format.json { head :no_content }
+  #     end
+  #   end
 
    def destroy_multiple
       Elective.destroy(params[:ids])
