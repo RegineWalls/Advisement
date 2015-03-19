@@ -1,6 +1,6 @@
 class Elective < ActiveRecord::Base
   require 'csv'
-  #self.primary_key = 'elective_code'
+  self.primary_key = 'elective_code'
   
   has_many :transcripts
   has_many :students, :through => :transcripts

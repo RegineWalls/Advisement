@@ -3,7 +3,7 @@
     <a class="btn btn-default" href="electives/new" role="button" style='width: 150px;'>ADD ELECTIVE</a>
   </div>
   <div class="row" style="height: 40px">
-    <a class="btn btn-default" href="electives/delete" role="button" style='width: 150px;'>DELETE ELECTIVE</a>
+    <a class="btn btn-default" href="electives/:id/delete" role="button" style='width: 150px;'>DELETE ELECTIVE</a>
   </div>
   <div class="row" style="height: 40px">
     <a class="btn btn-default" href="electives/:id/select" role="button" style='width: 150px;'>SELECT ELECTIVE</a>
@@ -33,7 +33,7 @@
     </thead>
     <tbody>
       <% @electives.each do |elective| %>
-      <tr onclick="location.href='<%= elective_path(elective.id) %>'">
+      <tr onclick="location.href='<%= elective_path(elective.elective_code) %>'" >
         <td style="text-align: center;"><%= elective.elective_code %></td>
         <td style="text-align: center;"><%= elective.name %></td>
         <td style="text-align: center;"><%= link_to "Edit", edit_elective_path(elective) %></td>
