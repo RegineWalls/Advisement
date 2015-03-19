@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root :to => "pages#index"
   resources :tracks
   resources :users
-  resources :electives
+  resources :electives, :id => /.*/
   resources :students
   resources :electives do
     collection {post :import }
@@ -49,6 +49,9 @@ Rails.application.routes.draw do
   resources :tracks do
     collection {post :import }
   end
+ 
+# match 'electives/:id' => 'electives#show', :constraints  => { :id => /[0-z\.]+/ }
+
   # get "/students", :to => "students#index", as: :students
   # get "/student/:id", :to => "students#show", as: :student
   # get "/students/new", :to => "students#new", as: :new_student
