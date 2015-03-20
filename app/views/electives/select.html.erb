@@ -2,23 +2,27 @@
   <div class="row" style="height: 35px; background-color: #36ADAE; text-align: center;"><!-- fix border and text alignment -->
     <h4>Select Electives</h4>
   </div>
- 
-<table class = "table table-hover">
-  <thead>
-    <tr>
-      <th style="text-align: center; width: 40px;"><input type="checkbox" id="selectAll" value="selectAll">
-      <th style="width: 120px; text-align: center;">Elective Code</th>
-      <th style="text-align: center;">Name</th>
-      <th style="text-align: center;">Units</th>
-  </thead>
-
-  <tbody>
-    <% @electives.each do |elective| %>
-        <td style="text-align: center;"><input type="checkbox" name="foo" value="bar4">
+  <table class = "table table-hover">
+    <thead>
+      <tr>
+        <th style="text-align: center; width: 40px;">
+          <input type="checkbox" id="selectAll" value=""></input>
+        </th>
+        <th style="width: 120px; text-align: center;">Elective Code</th>
+        <th style="text-align: center;">Name</th>
+        <th style="text-align: center;">Units</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <% @electives.each do |elective| %>
+        <td style="text-align: center;"><input type="checkbox" name="foo" value="bar4"></input></td>
         <td style="text-align: center;"><%= elective.elective_code %></td>
         <td style="text-align: center;"><%= elective.name %></td>
         <td style="text-align: center;"><%= elective.units %></td>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+<%= link_to 'Back', electives_path %>

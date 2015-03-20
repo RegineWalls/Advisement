@@ -24,6 +24,7 @@ Rails.application.routes.draw do
   resources :students do
     member do
       get 'roster'
+      get 'unadvised'
     end
   end
   resources :electives do

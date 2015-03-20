@@ -1,35 +1,48 @@
 <div class="col-md-3">
   <div class="row" style="height: 40px">
-<h1><%= @student.name %></h1>
-
-<strong>ID Number:</strong> <%= @student.id_number %> <br>
-<strong>Year Level:</strong> <%= @student.year_level %> <br>
-<strong>Course:</strong> <%= @student.course %> <br>
-<strong>Track:</strong> <%= @student.track %> <br>
-<strong>Specialization:</strong> <%= @student.specialization %> <br>
-<strong>E-mail Address:</strong> <%= @student.email_address %> <br>
-<strong>Contact Number:</strong> <%= @student.contact_number %> <br>
-</div>
+    <h1><%= @student.name %></h1>
+    <strong>ID Number: </strong><%= @student.id_number %>
+    <br>
+    <strong>Year Level: </strong><%= @student.year_level %>
+    <br>
+    <strong>Course: </strong><%= @student.course %>
+    <br>
+    <strong>Track: </strong><%= @student.track %>
+    <br>
+    <strong>Specialization: </strong><%= @student.specialization %>
+    <br>
+    <strong>E-mail Address: </strong><%= @student.email_address %>
+    <br>
+    <strong>Contact Number: </strong><%= @student.contact_number %>
+    <br>
+    <%= link_to 'Show', @student %> |
+    <%= link_to 'Back', students_path %>
+  </div>
 </div>
 
 <div class="col-md-9">
   <!-- fix border and text alignment -->
   <div class="row" style="height: 35px; background-color: #36ADAE; text-align: center;">
-<center><h4>Choose your Elective</h4></center>
+    <center><h4>Choose your Elective</h4></center>
   </div>
-<table class = "table table-hover">
-  <thead>
-    <tr>
-      <th style="text-align: center; width: 20px;"><input type="checkbox" id="selectAll" value="selectAll">
-      <th style="width: 100px; text-align: center;">Elective Code</th>
-      <th style="width: 200px; text-align: center;">Name</th>
-  </thead>
-<% @electives.each do |elective| %>
+  <table class = "table table-hover">
+    <thead>
+      <tr>
+        <th style="text-align: center; width: 20px;">
+          <input type="checkbox" id="selectAll" value="selectAll"></input>
+        </th>
+        <th style="width: 100px; text-align: center;">Elective Code</th>
+        <th style="width: 200px; text-align: center;">Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @electives.each do |elective| %>
       <tr>
         <td><%= check_box_tag "electives[]", elective.elective_code %></td>
         <td style="text-align: center;"><%= elective.elective_code %></td>
         <td style="text-align: center;"><%= elective.name %></td>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+      <% end %>
+    </tbody>
+  </table>
+</div>
