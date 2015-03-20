@@ -1,16 +1,166 @@
 <div class="col-md-3" style="border: 2px black;">
   <div class="row" style="text-align: left;">
   	<h1><%= @student.name %></h1>
-
-<strong>ID Number</strong>: <%= @student.id_number %> <br>
-<strong>Year Level</strong>: <%= @student.year_level %> <br>
-<strong>Course</strong>: <%= @student.course %> <br>
-<strong>Track</strong>: <%= @student.track %> <br>
-<strong>Specialization</strong>: <%= @student.specialization %> <br>
-<strong>E-mail Address</strong>: <%= @student.email_address %> <br>
-<strong>Contact Number</strong>: <%= @student.contact_number %> <br>
-<strong>Advisement Accomplished</strong>: <%= @student.advisement_accomplished %> <br>
-<br>
-<%= link_to "Edit", edit_student_path(@student) %> |
-<%= link_to "Advise", advise_student_path(@student) %> |
-<%= link_to "Back", students_path %>
+  	<strong>ID Number: </strong><%= @student.id_number %>
+  	<br>
+  	<strong>Year Level: </strong><%= @student.year_level %>
+  	<br>
+  	<strong>Course: </strong><%= @student.course %>
+  	<br>
+  	<strong>Track: </strong><%= @student.track %>
+  	<br>
+  	<strong>Specialization: </strong><%= @student.specialization %>
+  	<br>
+  	<strong>E-mail Address: </strong><%= @student.email_address %>
+  	<br>
+  	<strong>Contact Number: </strong><%= @student.contact_number %>
+  	<br>
+  	<strong>Advisement Status: </strong>
+  	<% if @student.advisement_accomplished == false %>
+  	Unadvised
+  	<% else %>
+  	Advised
+  	<% end %>
+  	<br>
+  	<br>
+  	<%= link_to "Edit", edit_student_path(@student) %> |
+  	<%= link_to "Advise", advise_student_path(@student) %> |
+  	<%= link_to "Back", students_path %>
+  </div>
+</div>
+<div class="col-md-9">
+	<section>
+		<table style='border: 2px;'>
+			<thead>
+				<tr>
+					<th style="text-align: center; width: 277px;"> </th>
+					<th style="text-align: center; width: 277px;"> </th>
+					<th style="text-align: center; width: 277px;"> </th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td></td>
+					<td style="text-align: center;">
+						<strong style="font-size: 18px;">Third Year</strong>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td style="text-align: center;">
+						<strong>Summer Semester</strong>
+						<table class="table table-stiped" style='font-size: 11px;'>
+							<thead>
+								<tr>
+									<th style="text-align: center;">Status</th>
+									<th style="text-align: center;">Elective Code</th>
+									<th style="text-align: center;">Units</th>
+								</tr>
+							</thead>
+							<tbody>
+								<!--LOGIC TO SHOW STUDENT'S SUMMER ELECTIVES-->
+							</tbody>
+						</table>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td style="text-align: center;">
+						<strong>First Semester</strong>
+						<table class="table table-stiped" style='font-size: 11px;'>
+							<thead>
+								<tr>
+									<th style="text-align: center;">Status</th>
+									<th style="text-align: center;">Elective Code</th>
+									<th style="text-align: center;">Units</th>
+								</tr>
+							</thead>
+							<tbody>
+								<!--LOGIC TO SHOW STUDENT'S 1ST SEM ELECTIVES-->
+							</tbody>
+						</table>
+					</td>
+					<td></td>
+					<td style="text-align: center;">
+						<strong>Second Semester</strong>
+						<table class="table table-stiped" style='font-size: 11px;'>
+							<thead>
+								<tr>
+									<th style="text-align: center;">Status</th>
+									<th style="text-align: center;">Elective Code</th>
+									<th style="text-align: center;">Units</th>
+								</tr>
+							</thead>
+							<tbody>
+								<!--LOGIC TO SHOW STUDENT'S 2NS SEM ELECTIVES-->
+							</tbody>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td style="text-align: center;">
+						<strong style="font-size: 18px;">Fourth Year</strong>
+					</td>
+					<td style="text-align: center;"></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td style="text-align: center;">
+						<strong>Summer Semester</strong>
+						<table class="table table-stiped" style='font-size: 11px;'>
+							<thead>
+								<tr>
+									<th style="text-align: center;">Status</th>
+									<th style="text-align: center;">Elective Code</th>
+									<th style="text-align: center;">Units</th>
+								</tr>
+							</thead>
+							<tbody>
+								<!--LOGIC TO SHOW STUDENT'S SUMMER SEM ELECTIVES-->
+							</tbody>
+						</table>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td style="text-align: center;">
+						<strong>First Semester</strong>
+						<table class="table table-stiped" style='font-size: 11px;'>
+							<thead>
+								<tr>
+									<th style="text-align: center;">Status</th>
+									<th style="text-align: center;">Elective Code</th>
+									<th style="text-align: center;">Units</th>
+								</tr>
+							</thead>
+							<tbody>
+								<!--LOGIC TO SHOW STUDENT'S 1ST SEM ELECTIVES-->
+							</tbody>
+						</table>
+					</td>
+					<td></td>
+					<td style="text-align: center;">
+						<strong>Second Semester</strong>
+						<table class="table table-stiped" style='font-size: 11px;'>
+							<thead>
+								<tr>
+									<th style="text-align: center;">Status</th>
+									<th style="text-align: center;">Elective Code</th>
+									<th style="text-align: center;">Units</th>
+								</tr>
+							</thead>
+							<tbody>
+								<!--LOGIC TO SHOW STUDENT'S 2ND SEM ELECTIVES-->
+							</tbody>
+						</table>
+					</td>
+				</tr>
+				<% if @student.course == 'BS MIS-MSCS' || @student.course == 'BS CS-MSCS' %>
+				<%= render 'fifth' %>
+				<% end %>
+			</tbody>
+		</table>
+	</section>
+</div>
