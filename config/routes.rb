@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root :to => "pages#index"
   resources :tracks
   resources :users
-  resources :electives, :id => /.*/
+  resources :electives, :id => /[^\/]+/ 
   resources :students
   resources :electives do
     collection {post :import }
