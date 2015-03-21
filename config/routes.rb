@@ -50,6 +50,16 @@ Rails.application.routes.draw do
   resources :tracks do
     collection {post :import }
   end
+  resources :tracks do
+    collection do
+      delete 'destroy_multiple'
+    end
+  end
+  resources :tracks do
+    member do
+      get 'delete'
+    end
+  end
  
 # match 'electives/:id' => 'electives#show', :constraints  => { :id => /[0-z\.]+/ }
 

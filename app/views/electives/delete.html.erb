@@ -3,27 +3,27 @@
     <h4>Delete Electives</h4>
   </div>
   <%= form_tag destroy_multiple_electives_path, method: :delete do %>
-<table class = "table table-hover">
-  <thead>
-    <tr>
-      <th style="text-align: center; width: 30px;"><input type="checkbox" id="selectAll" value="selectAll">
-      <th style="width: 150px; text-align: center;">Elective Code</th>
-      <th style="text-align: center;">Name</th>
-      <th style="text-align: center;">Units</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @electives.each do |elective| %>
-    <tr>
-      <td class="table-icon"><%= check_box_tag "ids[]", elective.id %></td>
-        <td style="text-align: center;"><%= elective.elective_code %></td>
-        <td style="text-align: center;"><%= elective.name %></td>
-        <td style="text-align: center;"><%= elective.units %></td>
+  <table class = "table table-hover">
+    <thead>
+      <tr>
+        <th style="text-align: center; width: 30px;"><input type="checkbox" id="selectAll" value="selectAll"></input>
+        </th>
+        <th style="width: 150px; text-align: center;">Elective Code</th>
+        <th style="text-align: center;">Name</th>
+        <th style="text-align: center;">Units</th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
-
+    </thead>
+    <tbody>
+      <% @electives.each do |elective| %>
+      <tr>
+        <td class="table-icon"><%= check_box_tag "ids[]", elective.id %></td>
+          <td style="text-align: center;"><%= elective.elective_code %></td>
+          <td style="text-align: center;"><%= elective.name %></td>
+          <td style="text-align: center;"><%= elective.units %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
   <%= submit_tag "Delete selected" %>
   <%end%>
 </div>
