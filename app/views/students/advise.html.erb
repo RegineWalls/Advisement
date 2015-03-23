@@ -38,7 +38,7 @@
     <tbody>
       <% @electives.each do |elective| %>
       <tr>
-        <td><%= check_box_tag "electives[]", elective.elective_code %></td>
+        <td style="text-align: center;"><%= check_box_tag "electives[]", elective.elective_code %></td>
         <td style="text-align: center;"><%= elective.elective_code %></td>
         <td style="text-align: center;"><%= elective.name %></td>
       </tr>

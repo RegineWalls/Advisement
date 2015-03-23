@@ -1,7 +1,7 @@
 class Elective < ActiveRecord::Base
   require 'csv'
   self.primary_key = 'elective_code'
-  
+
   has_many :transcripts
   has_many :students, :through => :transcripts
 
@@ -15,6 +15,8 @@ class Elective < ActiveRecord::Base
   validates :slots, presence: true, numericality: true
   validates :semester, presence: true, numericality: true
 
+  accepts_nested_attributes_for :transcripts
+  
   # External CSV File Import funtion
   def self.import(file)  
     CSV.foreach(file.path, headers: true) do |row|

@@ -15,6 +15,8 @@ class Student < ActiveRecord::Base
   validates :email_address, presence: true
   validates :contact_number, presence: true, length: { minimum: 11, maximum: 13 }, numericality: true
   
+  accepts_nested_attributes_for :transcripts
+  
  def self.search(search)
   if search
     find(:all, :conditions => ['id_number LIKE ?', "%#{search}%"])
