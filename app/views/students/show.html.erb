@@ -60,6 +60,13 @@
 							</thead>
 							<tbody>
 								<!--LOGIC TO SHOW STUDENT'S SUMMER ELECTIVES-->
+							<% @student.transcripts.each do |transcripts| %>
+    							<tr>
+    							  <td><%= transcripts.status %></td>
+    							  <td><%= transcripts.elective.elective_code %></td>
+    							  <td><%= transcripts.elective.units %></td>
+    							</tr>
+  							<% end %>
 							</tbody>
 						</table>
 					</td>
@@ -80,9 +87,9 @@
 								<!--LOGIC TO SHOW STUDENT'S 1ST SEM ELECTIVES-->
 							<% @student.transcripts.each do |transcripts| %>
     							<tr>
-    							  <td><%=  %></td>
-    							  <td><%= transcripts.elective_code %></td>
-    							  <td><%= transcripts.elective_units %></td>
+    							  <td><%= transcripts.status %></td>
+    							  <td><%= transcripts.elective.elective_code %></td>
+    							  <td><%= transcripts.elective.units %></td>
     							</tr>
   							<% end %>
 							</tbody>
@@ -103,9 +110,9 @@
 								<!--LOGIC TO SHOW STUDENT'S 2NS SEM ELECTIVES-->
 							<% @student.transcripts.each do |transcripts| %>
     							<tr>
-    							  <td><%=  %></td>
-    							  <td><%= transcripts.elective_code %></td>
-    							  <td><%= transcripts.elective_units %></td>
+    							  <td><%= transcripts.status %></td>
+    							  <td><%= transcripts.elective.elective_code %></td>
+    							  <td><%= transcripts.elective.units %></td>
     							</tr>
   							<% end %>
 							</tbody>
@@ -135,9 +142,9 @@
 								<!--LOGIC TO SHOW STUDENT'S SUMMER SEM ELECTIVES-->
 							<% @student.transcripts.each do |transcripts| %>
     							<tr>
-    							  <td><%=  %></td>
-    							  <td><%= transcripts.elective_code %></td>
-    							  <td><%= transcripts.elective_units %></td>
+    							  <td><%= transcripts.status %></td>
+    							  <td><%= transcripts.elective.elective_code %></td>
+    							  <td><%= transcripts.elective.units %></td>
     							</tr>
   							<% end %>
 							</tbody>
@@ -160,9 +167,9 @@
 								<!--LOGIC TO SHOW STUDENT'S 1ST SEM ELECTIVES-->
 							<% @student.transcripts.each do |transcripts| %>
     							<tr>
-    							  <td><%=  %></td>
-    							  <td><%= transcripts.elective_code %></td>
-    							  <td><%= transcripts.elective_units %></td>
+    							  <td><%= transcripts.status %></td>
+    							  <td><%= transcripts.elective.elective_code %></td>
+    							  <td><%= transcripts.elective.units %></td>
     							</tr>
   							<% end %>
 							</tbody>
@@ -181,11 +188,11 @@
 							</thead>
 							<tbody>
 								<!--LOGIC TO SHOW STUDENT'S 2ND SEM ELECTIVES-->
-								<% @student.transcripts.each do |transcripts| %>
+							<% @student.transcripts.each do |transcripts| %>
     							<tr>
-    							  <td><%=  %></td>
-    							  <td><%= transcripts.elective_code %></td>
-    							  <td><%= transcripts.elective_units %></td>
+    							  <td><%= transcripts.status %></td>
+    							  <td><%= transcripts.elective.elective_code %></td>
+    							  <td><%= transcripts.elective.units %></td>
     							</tr>
   							<% end %>
 							</tbody>
