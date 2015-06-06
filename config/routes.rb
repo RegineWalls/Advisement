@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root :to => "pages#index"
   resources :tracks
   resources :users
-  resources :electives, :id => /.*/
+  resources :electives, :id => /[^\/]+/ 
   resources :students
   resources :electives do
     collection {post :import }
@@ -24,6 +24,7 @@ Rails.application.routes.draw do
   resources :students do
     member do
       get 'roster'
+      get 'unadvised'
     end
   end
   resources :electives do
@@ -49,6 +50,22 @@ Rails.application.routes.draw do
   resources :tracks do
     collection {post :import }
   end
+<<<<<<< HEAD
+=======
+  resources :tracks do
+    collection do
+      delete 'destroy_multiple'
+    end
+  end
+  resources :tracks do
+    member do
+      get 'delete'
+    end
+  end
+ 
+# match 'electives/:id' => 'electives#show', :constraints  => { :id => /[0-z\.]+/ }
+
+>>>>>>> cb4fe3c6abbfee342bf4ac11f3b927dfe8149bde
   # get "/students", :to => "students#index", as: :students
   # get "/student/:id", :to => "students#show", as: :student
   # get "/students/new", :to => "students#new", as: :new_student

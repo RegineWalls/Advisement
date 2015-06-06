@@ -10,10 +10,6 @@
     <!-- Course -->
     <%= f.label :course, :label => 'Course:' %>
     <%= f.select :course, :collection => ['BS MIS', 'BS MIS-MSCS', 'BS CS', 'BS CS-MSCS'] %><p>
-
-    <!-- REMEMBER TO CHANGE DROPDOWN TO CHECKBOXES TO ACCEPT MULTIPLE TRACKS AND SPECS.
-    Current database has no capacity to accept that for now. -->
-
     <!-- Track -->
     <%= f.label :track, :label => 'Track:' %>
     <%= f.select :track, :collection => ['Enterprise Systems', 'Business Intelligence', 'Interactive Multimedia', 'N/A'] %><p>
@@ -24,8 +20,6 @@
     <%= f.input :email_address, :label => 'Email Address:', :input_html => {:size => 30} %>
     <!-- Contact -->
     <%= f.input :contact_number, :label => 'Contact Number:', :input_html => {:maxlength => 11, :size => 25} %>
-    <!-- Advisement Accomplished? -->
-    <%= f.input :advisement_accomplished, :label => 'Advisement Accomplished:', as: :radio_buttons, :collection => ['Yes', 'No'] %>
     <br>
   </div>
 

@@ -88,7 +88,12 @@ class StudentsController < ApplicationController
   end
 
   def roster
-    @students = Student.all
+    @students = Student.where(advisement_accomplished: true)
     render :template => "students/roster"
+  end
+
+  def unadvised
+    @students = Student.where(advisement_accomplished: false)
+    render :template => "students/unadvised"
   end
 end
